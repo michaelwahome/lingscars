@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: #5BC0BE;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    background: white;
+    width: 40vw;
+    margin: 5em auto 1em;
+    display: grid;
+}
+
+
+.form{
+    display: relative;
+    padding: 0 2em 2em;
+    text-align: center;
+}
+
+.input{
+    width: 80%;
+    border-radius: 20px;
+    border-width: 0.1px;
+    padding: 1em;
+    margin: 1em;
+    outline: none;
+    background: rgb(233, 233, 233);
+}
+.label{
+    font-size: 1.3em;
+}
+
+::placeholder{
+    color: black;
+}
+
+.dropdown{
+    width: 87%;
+}
+
+.cta{
+    margin: 1em;
+    background: black;
+    width: 84.7%;
+    color: white;
+    border: none;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.cta:hover{
+    cursor: pointer;
+    color: black;
+    background: rgb(233, 233, 233);
+}
+
+.form a{
+    color: green;
+    margin: 1em;
+    text-decoration: underline;
+}
+
+i{
+    position: absolute;
+    transform: translate(-50px, 26px);
+}

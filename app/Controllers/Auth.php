@@ -18,4 +18,9 @@ class Auth extends BaseController
     {
         return view('auth/register');
     }
+
+    public function register_two()
+    {
+        return view('auth/register_two');
+    }
 }
