@@ -30,7 +30,7 @@
                 <input type="search" name="search-bar" id="search-bar" class="search-bar" placeholder="search">
             </div>
             <div class="col">
-                <button class="btn btn-primary"><a href="/login" style="color:white">Log in/Sign up</a></button>
+                <button class="btn btn-primary"><a href="/auth/login" style="color:white">Log in/Sign up</a></button>
                 <!-- <input type="button" value="log in/sign up" class="btn btn-primary"> -->
                 <!-- <i class="fa fa-shopping-basket" aria-hidden="true"></i> -->
             </div>
