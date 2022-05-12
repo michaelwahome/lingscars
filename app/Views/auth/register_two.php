@@ -16,17 +16,18 @@
         <div class="form">
             <h1>Sign Up For Lings Cars</h1>
             <h2>Page 2 Of 2</h2>
-            <form action="" method="post">
+            <form action="/Auth/processRegistration" method="post">
+                <?= csrf_field() ?>
                 <div class="input-div">
                     <label for="fname">What's Your First Name?</label>
-                    <input class="input" type="text" name="fname" id="fname" placeholder="Enter Your First Name">
+                    <input class="input" type="text" name="fname" id="fname" placeholder="Enter Your First Name" required>
                 </div> 
                 <div class="input-div">
                     <label for="lname">What's Your Last Name?</label>
-                    <input class="input" type="text" name="lname" id="lname" placeholder="Enter Your Last Name">
+                    <input class="input" type="text" name="lname" id="lname" placeholder="Enter Your Last Name" required>
                 </div>
                 <label for="gender">What's Your Gender?</label>
-                <select class="input dropdown" name="gender" id="gender">
+                <select class="input dropdown" name="gender" id="gender" required>
                     <option value="" selected disabled>Choose Your Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>

@@ -15,8 +15,9 @@
     <h2 style="text-align: center"><a href="/">Lingscars</a></h2>
         <div class="form">
             <h1>Log In To Your Account</h1>
-            <form action="" method="post">
-            <div class="input-div">
+            <form action="/Auth/processLogin" method="post">
+                <?= csrf_field() ?> 
+                <div class="input-div">
                     <label class="label" for="email">Enter Your Email</label>
                     <input class="input" type="email" name="email" id="email" placeholder="Enter Your E-mail Here">
                     <i id="user-icon" class="fas fa-user"></i>
