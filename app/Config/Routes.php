@@ -37,6 +37,7 @@ $routes->group('auth', function($routes){
     $routes->get('login', 'Auth::login');
     $routes->get('register', 'Auth::register');
     $routes->get('register_two', 'Auth::register_two');
+    $routes->get('catalogue', 'Catalogue::index');
 });
 
 /*
