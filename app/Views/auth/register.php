@@ -16,6 +16,7 @@
         <div class="form">
             <h1>Sign Up For Lings Cars</h1>
             <form action="/Auth/processRegistration" method="post">
+            <?= csrf_field() ?>
                 <div class="input-div">
                     <label class="label" for="fname">What's Your First Name?</label>
                     <input class="input" type="text" name="fname" id="fname" placeholder="Enter Your First Name" required>
