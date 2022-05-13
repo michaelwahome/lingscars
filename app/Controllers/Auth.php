@@ -71,7 +71,7 @@ class Auth extends BaseController
 		// 		//echo "<br>Admin Account";
 		// 		return redirect()->to('');
 		// 	}
-		// }
+		}
     }
 
     public function register()
