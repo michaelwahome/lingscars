@@ -57,7 +57,7 @@ class Auth extends BaseController
 			//-> NOT EMPTY: Create a session to store user info and redirect to admin or home page
 			$session = session();
 			$session->set('user_details', $user_info);
-			return view('/catalogue');
+			//return view('/catalogue');
 
 		// 	//Admin or User clearance level
         //  1. User role_id -> Redirect to user landing page
@@ -114,6 +114,6 @@ class Auth extends BaseController
 	    echo "<br><br>Result - $confirmation";
 
 	    //4. Redirect to Login page
-	    return redirect()->to('Auth/login');
+	    //return redirect()->to('Auth/login');
 	}
 }

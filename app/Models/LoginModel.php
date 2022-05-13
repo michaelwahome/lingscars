@@ -26,7 +26,7 @@ class LoginModel extends Model
 		foreach ($query->getResult() as $row)
 		{
 		//Initialize User Info Array
-		$user_info = array('user_id' => $row->user_id, 'first_name' => $row->first_name, 'last_name' => $row->last_name, 'gender' => $row->gender, 'email' => $row->email, 'phone_number' => $row->phone_number);
+		$user_info = array('user_id' => $row->user_id, 'role_id'=> $row->role_id, 'first_name' => $row->first_name, 'last_name' => $row->last_name, 'gender' => $row->gender, 'email' => $row->email, 'phone_number' => $row->phone_number);
 		}
 
 		//Return array
