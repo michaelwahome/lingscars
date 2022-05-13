@@ -14,10 +14,10 @@ class SignUpModel extends Model
     }
 
     //Method to add a user
-	public function signup($firstname, $lastname, $gender, $email, $phone, $password)
+	public function signup($firstname, $lastname, $gender, $email, $password)
 	{
 		//Query
-		if ($this->db->query("INSERT INTO users (first_name, last_name, gender, email, password) VALUES ('$firstname', '$lastname', '$gender', '$email', '$password')") AND $this->db->query("INSERT INTO carts (username, cart_total) VALUES ('$username', '0')") AND $this->db->query("INSERT INTO wallets (username, balance) VALUES ('$username', '0')"))
+		if ($this->db->query("INSERT INTO users (first_name, last_name, gender, email, password, role_id) VALUES ('$firstname', '$lastname', '$gender', '$email', '$password', '1')"))
 		{
 		    $confirmation = "Successful";
 		}

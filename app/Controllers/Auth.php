@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UsersModel;
 use App\Models\LoginModel;
-use App\Model\SignUpModel;
+use App\Models\SignUpModel;
 
 class Auth extends BaseController
 {
@@ -21,7 +21,7 @@ class Auth extends BaseController
     public function processLogin()
     {
         //1. Create an instance of the model
-		$loginModel = new UsersModel();
+		$loginModel = new LoginModel();
 
 		//Temporary checkpoint
 		//echo "Model instance successfully created<br>";
@@ -57,6 +57,7 @@ class Auth extends BaseController
 			//-> NOT EMPTY: Create a session to store user info and redirect to admin or home page
 			$session = session();
 			$session->set('user_details', $user_info);
+			return view('/catalogue');
 
 		// 	//Admin or User clearance level
         //  1. User role_id -> Redirect to user landing page
