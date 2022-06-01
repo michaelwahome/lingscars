@@ -40,6 +40,11 @@ $routes->group('auth', function($routes){
     $routes->get('catalogue', 'Catalogue::index');
 });
 
+$routes->get('/suv_catalogue', 'Catalogue::suv');
+$routes->get('/bike_catalogue', 'Catalogue::bike');
+$routes->get('/sedan_catalogue', 'Catalogue::sedan');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
