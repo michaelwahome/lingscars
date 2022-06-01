@@ -93,7 +93,7 @@
                 <div class="frame-and-price">
                     <div class="part-one">
                         <div class="frame-part">
-                            <img src="images/frame.png" alt="">
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -108,7 +108,7 @@
 
                     <div class="part-two">
                         <div class="frame-part">
-                            <img src="images/frame.png" alt="">
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -123,7 +123,7 @@
 
                     <div class="part-three">
                         <div class="frame-part">
-                            <img src="images/frame.png" alt="">
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -146,7 +146,7 @@
         <div class="feature-top-products">
             <div class="feature-top-product">
                 <div class="feature-top-image">
-                    <img src="images/feature-car.png" alt="">
+                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>
@@ -162,7 +162,7 @@
             <div class="feature-top-product">
                 
                 <div class="feature-top-image">
-                    <img src="images/feature-car.png" alt="">
+                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>
@@ -177,7 +177,7 @@
 
             <div class="feature-top-product">
                 <div class="feature-top-image">
-                    <img src="images/feature-car.png" alt="">
+                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>
