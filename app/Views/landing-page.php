@@ -24,14 +24,15 @@
 
         <div class="row">
             <div class="col">
-                <div class="dp-ellipse"></div>
+            <div class="dp-ellipse">
+                    <img src="images/man.jpg" alt="">
+                </div>
             </div>
             <div class="col">
                 <input type="search" name="search-bar" id="search-bar" class="search-bar" placeholder="search">
             </div>
             <div class="col">
-                <button class="btn btn-primary"><a href="/auth/login" style="color:white">Log in/Sign up</a></button>
-                <!-- <input type="button" value="log in/sign up" class="btn btn-primary"> -->
+                <input type="button" value="log in/sign up" class="btn btn-primary">
                 <!-- <i class="fa fa-shopping-basket" aria-hidden="true"></i> -->
             </div>
         </div>
@@ -59,7 +60,7 @@
                 <img src="images/main-image.png" alt="">
             </div>
         </div>
-        <input type="button" value="Shop now" class="btn btn-dark">
+        <a href="http://localhost:8080/suv_catalogue"><input type="button" value="Shop now" class="btn btn-dark"></a>
     </section>
     
      <!-- this section contains the main picture for the page -->
@@ -67,13 +68,13 @@
         <div class="row">
             <div class="bottom-center-images">
                 <div class="bottom-center-image">
-                    <img src="images/center-image-one.png" alt="">
+                    <a href="http://localhost:8080/sedan_catalogue"><img src="images/center-image-one.png" alt=""></a>
                 </div>
                 <div class="bottom-center-image">
-                    <img src="images/center-image-two.png" alt="">
+                <a href="http://localhost:8080/suv_catalogue"><img src="images/center-image-two.png" alt=""></a>
                 </div>
                 <div class="bottom-center-image">
-                    <img src="images/center-image-three.png" alt="">
+                    <a href="http://localhost:8080/bike_catalogue"><img src="images/center-image-three.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -92,7 +93,7 @@
                 <div class="frame-and-price">
                     <div class="part-one">
                         <div class="frame-part">
-                            <img src="images/frame.png" alt="">
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -107,7 +108,7 @@
 
                     <div class="part-two">
                         <div class="frame-part">
-                            <img src="images/frame.png" alt="">
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -122,7 +123,7 @@
 
                     <div class="part-three">
                         <div class="frame-part">
-                            <img src="images/frame.png" alt="">
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -145,7 +146,7 @@
         <div class="feature-top-products">
             <div class="feature-top-product">
                 <div class="feature-top-image">
-                    <img src="images/feature-car.png" alt="">
+                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>
@@ -161,7 +162,7 @@
             <div class="feature-top-product">
                 
                 <div class="feature-top-image">
-                    <img src="images/feature-car.png" alt="">
+                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>
@@ -176,7 +177,7 @@
 
             <div class="feature-top-product">
                 <div class="feature-top-image">
-                    <img src="images/feature-car.png" alt="">
+                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>

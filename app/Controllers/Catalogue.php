@@ -4,8 +4,16 @@ namespace App\Controllers;
 
 class Catalogue extends BaseController
 {
-    public function index()
+    public function suv()
     {
-        return view('catalogue');
+        return view('suv_catalogue');
+    }
+    public function bike()
+    {
+        return view('bike_catalogue');
+    }
+    public function sedan()
+    {
+        return view('sedan_catalogue');
     }
 }
