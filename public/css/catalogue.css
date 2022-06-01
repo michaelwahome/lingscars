@@ -7,6 +7,81 @@ body
 {
     overflow-x: hidden;
 }
+.dp-ellipse img
+{
+    width: 80px;
+    height: 81px;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 10px;
+    background: #C4C4C4;
+}
+.search-bar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 21px 19px;
+
+    position: static;
+    width: 341px;
+    height: 62px;
+    left: 402.5px;
+    top: 0px;
+
+    background: #C4C4C4;
+    border-radius: 9.29314px;
+    border: none;
+    margin-top: 25px;
+}
+.btn.btn-primary
+{
+    margin-top: 40px;
+    margin-left: 170px;
+}
+.navbar-main
+{
+    background: #1E1B1B;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+.menu-icon
+{
+    display: flex;
+    flex-direction: row;
+}
+.menu-icon p
+{
+    color: #ffffff;
+    font-size: 10px;
+}
+.fa.fa-bars
+{
+    color: #ffffff;
+    margin-top: 5px;
+    margin-left: 30px;
+    font-size: 30px;
+}
+.navbar-brand
+{
+    display: flex;
+    float: right;
+}
+.navbar-brand a
+{
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
 .top-bar
 {
     width: 100%;
@@ -17,6 +92,7 @@ body
     align-items: center;
     font-size: 50px;
     padding-top: 30px;
+    margin-bottom: 30px;
 }
 .frames
 {
@@ -34,7 +110,6 @@ body
 .frame-two h1
 {
     padding-top: 50px;
-
 }
 .image-and-words
 {
@@ -56,10 +131,32 @@ body
     width: 40%;
     text-align: center;
 }
+.image-and-words p
+{
+    text-align: justify;
+}
 .frame-three img
 {
     width: 100%;
+    
 }
-
-
-
+.picture img:hover 
+{
+    position:relative;
+    width:900px;
+    height:auto;
+    display:block;
+}
+.grey-and-black-words
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.grey-words
+{
+    margin-right: 5%;
+    color: #898989;
+    text-decoration-line: line-through;
+}
