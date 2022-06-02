@@ -189,7 +189,6 @@
                 </div>
             </div>
             <div class="frame-two">
-                <h1><b>Sedan Highlights</b></h1>
                 <div class="image-and-words">
                     <div class="picture">
                         <img src="images/frame15.png" alt="">
