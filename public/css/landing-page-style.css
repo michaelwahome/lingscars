@@ -49,7 +49,8 @@ body
 .btn.btn-primary
 {
     margin-top: 40px;
-    margin-left: 170px;
+    float: right;
+    margin-right: 40px;
 }
 .navbar-main
 {
