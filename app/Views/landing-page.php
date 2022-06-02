@@ -60,7 +60,7 @@
                 <img src="images/main-image.png" alt="">
             </div>
         </div>
-        <a href="http://localhost:8080/suv_catalogue"><input type="button" value="Shop now" class="btn btn-dark"></a>
+        <a href="http://localhost:8080/overall_catalogue"><input type="button" value="Shop now" class="btn btn-dark"></a>
     </section>
     
      <!-- this section contains the main picture for the page -->
