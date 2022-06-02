@@ -28,9 +28,7 @@
                     <img src="images/man.jpg" alt="">
                 </div>
             </div>
-            <div class="col">
-                <input type="search" name="search-bar" id="search-bar" class="search-bar" placeholder="search">
-            </div>
+
             <div class="col">
                 <input type="button" value="log in/sign up" class="btn btn-primary">
                 <!-- <i class="fa fa-shopping-basket" aria-hidden="true"></i> -->
