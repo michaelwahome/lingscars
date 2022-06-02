@@ -16,4 +16,8 @@ class Catalogue extends BaseController
     {
         return view('sedan_catalogue');
     }
+    public function overall()
+    {
+        return view('overall_catalogue');
+    }
 }

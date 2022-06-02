@@ -43,6 +43,7 @@ $routes->get('catalogue', 'Catalogue::index');
 $routes->get('/suv_catalogue', 'Catalogue::suv');
 $routes->get('/bike_catalogue', 'Catalogue::bike');
 $routes->get('/sedan_catalogue', 'Catalogue::sedan');
+$routes->get('/overall_catalogue', 'Catalogue::overall');
 
 
 /*
