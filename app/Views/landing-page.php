@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet"> 
-    <link href="css/landing-page-style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="../css/landing-page-style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <title>Lings Cars</title>
 </head>
 <body>
@@ -25,12 +25,12 @@
         <div class="row">
             <div class="col">
             <div class="dp-ellipse">
-                    <img src="images/man.jpg" alt="">
+                    <img src="../images/man.jpg" alt="">
                 </div>
             </div>
 
             <div class="col">
-                <input type="button" value="log in/sign up" class="btn btn-primary">
+                <a href="/auth/login"><input type="button" value="log in/sign up" class="btn btn-primary"></a>
                 <!-- <i class="fa fa-shopping-basket" aria-hidden="true"></i> -->
             </div>
         </div>
@@ -55,7 +55,7 @@
     <section class="center-page">
         <div class="row">
             <div class="main-image">
-                <img src="images/main-image.png" alt="">
+                <img src="../images/main-image.png" alt="">
             </div>
         </div>
         <a href="http://localhost:8080/overall_catalogue"><input type="button" value="Shop now" class="btn btn-dark"></a>
@@ -66,13 +66,13 @@
         <div class="row">
             <div class="bottom-center-images">
                 <div class="bottom-center-image">
-                    <a href="http://localhost:8080/sedan_catalogue"><img src="images/center-image-one.png" alt=""></a>
+                    <a href="http://localhost:8080/sedan_catalogue"><img src="../images/center-image-one.png" alt=""></a>
                 </div>
                 <div class="bottom-center-image">
-                <a href="http://localhost:8080/suv_catalogue"><img src="images/center-image-two.png" alt=""></a>
+                <a href="http://localhost:8080/suv_catalogue"><img src="../images/center-image-two.png" alt=""></a>
                 </div>
                 <div class="bottom-center-image">
-                    <a href="http://localhost:8080/bike_catalogue"><img src="images/center-image-three.png" alt=""></a>
+                    <a href="http://localhost:8080/bike_catalogue"><img src="../images/center-image-three.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@
                 <div class="frame-and-price">
                     <div class="part-one">
                         <div class="frame-part">
-                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="../images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -106,7 +106,7 @@
 
                     <div class="part-two">
                         <div class="frame-part">
-                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="../images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -121,7 +121,7 @@
 
                     <div class="part-three">
                         <div class="frame-part">
-                        <a href="http://localhost:8080/sedan_catalogue"><img src="images/frame.png" alt=""></a>
+                        <a href="http://localhost:8080/sedan_catalogue"><img src="../images/frame.png" alt=""></a>
                         </div>
                         <div class="price-part">
                             <p class="vehicles">Vehicles, Family</p>
@@ -144,7 +144,7 @@
         <div class="feature-top-products">
             <div class="feature-top-product">
                 <div class="feature-top-image">
-                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
+                <a href="http://localhost:8080/sedan_catalogue"><img src="../images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>
@@ -160,7 +160,7 @@
             <div class="feature-top-product">
                 
                 <div class="feature-top-image">
-                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
+                <a href="http://localhost:8080/sedan_catalogue"><img src="../images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>
@@ -175,7 +175,7 @@
 
             <div class="feature-top-product">
                 <div class="feature-top-image">
-                <a href="http://localhost:8080/sedan_catalogue"><img src="images/feature-car.png" alt=""></a>
+                <a href="http://localhost:8080/sedan_catalogue"><img src="../images/feature-car.png" alt=""></a>
                 </div>
                 <div class="feature-top-words">
                     <p class="vehicles">Sports car, Highly<br>Rated</p>
@@ -195,7 +195,7 @@
             <h1 class="follow"><b>Follow Our Socials</b></h1>
          </div>
         <div class="footer-icons">
-            <img src="images/social-media-icons.png" alt="">
+            <img src="../images/social-media-icons.png" alt="">
         </div>
         <div class="footer-blocks">
             <div class="footer-block">
