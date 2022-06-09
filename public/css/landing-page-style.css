@@ -133,7 +133,7 @@ body
     width: 98%;
     height: 572px;
     margin-top: 50px;
-    background: linear-gradient(180deg, #B40D17 0%, rgba(243, 12, 12, 0.5625) 88.54%, rgba(231, 11, 24, 0) 100%);
+    background: linear-gradient(90deg, #333333 0%, rgba(62, 128, 182, 0.563) 88.54%, rgba(231, 11, 24, 0) 100%);
     border-radius: 20px;
     padding-top: 20px;
 }
@@ -240,10 +240,12 @@ p.sports
     margin-left: 10px;
 
 }
-.btn.btn-danger
+.btn.btn-danger.discount-price
 {
     width: 67.02px;
     height: 42.28px;
+    background: rgba(62, 128, 182, 0.563);
+    border: none;
 }
 p.euro
 {

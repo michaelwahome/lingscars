@@ -54,7 +54,7 @@
                             <p class="vehicles">Vehicles, Family</p>
                             <p class="sports"><b>Sports, Utility Vehicle,<br>Limited Edition</b></p>
                             <div class="button-and-strike-through">
-                                <input type="button" class="btn btn-danger" value="20%">
+                                <input type="button" class="btn btn-danger discount-price" value="20%">
                                 <p><b>€1000</b></p>
                             </div>
                             <p class="euro">€800</p>
@@ -69,7 +69,7 @@
                             <p class="vehicles">Vehicles, Family</p>
                             <p class="sports"><b>Sports, Utility Vehicle,<br>Limited Edition</b></p>
                             <div class="button-and-strike-through">
-                                <input type="button" class="btn btn-danger" value="20%">
+                                <input type="button" class="btn btn-danger discount-price" value="20%">
                                 <p><b>€1000</b></p>
                             </div>
                             <p class="euro">€800</p>
@@ -84,7 +84,7 @@
                             <p class="vehicles">Vehicles, Family</p>
                             <p class="sports"><b>Sports, Utility Vehicle,<br>Limited Edition</b></p>
                             <div class="button-and-strike-through">
-                                <input type="button" class="btn btn-danger" value="20%">
+                                <input type="button" class="btn btn-danger discount-price" value="20%">
                                 <p><b>€1000</b></p>
                             </div>
                             <p class="euro">€800</p>
