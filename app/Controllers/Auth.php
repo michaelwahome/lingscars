@@ -43,8 +43,8 @@ class Auth extends BaseController
 	    $user_info = $loginModel-> login($email, $password);
 
 	    // Model Test
-	    echo "<br><br>Result: ";
-	    print_r($user_info);
+	    //echo "<br><br>Result: ";
+	    //print_r($user_info);
 
 	    //4. If array is empty:
 		if(empty($user_info))
@@ -57,7 +57,7 @@ class Auth extends BaseController
 			//-> NOT EMPTY: Create a session to store user info and redirect to admin or home page
 			$session = session();
 			$session->set('user_details', $user_info);
-			//return view('/catalogue');
+			return redirect()->to('home');
 
 		// 	//Admin or User clearance level
         //  1. User role_id -> Redirect to user landing page
@@ -111,9 +111,9 @@ class Auth extends BaseController
 	    $confirmation = $registerModel->signup($firstname, $lastname, $gender, $email, $password);
 
 	    //TEST
-	    echo "<br><br>Result - $confirmation";
+	    //echo "<br><br>Result - $confirmation";
 
-	    //4. Redirect to Login page
-	    //return redirect()->to('Auth/login');
+	    //4. Redirect to Home page
+	    return redirect()->to('home');
 	}
 }
