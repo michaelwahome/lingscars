@@ -94,7 +94,7 @@
                         <?php
                             if (isset($_SESSION["user_details"])){
                         ?>
-                            <a href="#"><button class="btn btn-secondary my-0 mx-5">Cart</button></a>
+                            <a href="/cart"><button class="btn btn-secondary my-0 mx-5">Cart</button></a>
 
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle my-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
