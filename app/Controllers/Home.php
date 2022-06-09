@@ -9,7 +9,7 @@ class Home extends BaseController
         return view('landing-page');
     }
 
-    public function temproute()
+    public function maintemplate()
     {
         return view ('templates/main_template');
     }

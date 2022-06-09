@@ -41,43 +41,43 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Catalogue</a>
+                                <a class="nav-link" href="/catalogue">Catalogue</a>
                             </li>
                             
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="/sedan_catalogue" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Sedan
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Toyota</a></li>
-                                    <li><a class="dropdown-item" href="#">Honda</a></li>
+                                    <li><a class="dropdown-item" href="/sedan_catalogue">Toyota</a></li>
+                                    <li><a class="dropdown-item" href="/sedan_catalogue">Honda</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">View All</a></li>
+                                    <li><a class="dropdown-item" href="/sedan_catalogue">View All</a></li>
                                 </ul>
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="/suv_catalogue" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     SUV
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Toyota</a></li>
-                                    <li><a class="dropdown-item" href="#">Range Rover</a></li>
-                                    <li><a class="dropdown-item" href="#">Volkswagen</a></li>
+                                    <li><a class="dropdown-item" href="/suv_catalogue">Toyota</a></li>
+                                    <li><a class="dropdown-item" href="/suv_catalogue">Range Rover</a></li>
+                                    <li><a class="dropdown-item" href="/suv_catalogue">Volkswagen</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">View All</a></li>
+                                    <li><a class="dropdown-item" href="/suv_catalogue">View All</a></li>
                                 </ul>
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="/bike_catalogue" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Bike
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Yamaha</a></li>
-                                    <li><a class="dropdown-item" href="#">Kawasaki</a></li>
+                                    <li><a class="dropdown-item" href="/bike_catalogue">Yamaha</a></li>
+                                    <li><a class="dropdown-item" href="/bike_catalogue">Kawasaki</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">View All</a></li>
+                                    <li><a class="dropdown-item" href="/bike_catalogue">View All</a></li>
                                 </ul>
                             </li>
 
@@ -89,9 +89,9 @@
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
 
-                        <button class="btn btn-secondary my-0 mx-5">Register</button>
+                        <a href="/auth/login"><button class="btn btn-secondary my-0 mx-5">Log In</button></a>
 
-                        <button class="btn btn-primary my-0 ">Log In</button>
+                        <a href="/auth/register"><button class="btn btn-primary my-0 ">Sign Up</button></a>
                     </div>
                 </div>
             </nav>
@@ -111,19 +111,19 @@
                             <ul> 
                                 <li>
                                     <i class="bx bx-chevron-right"></i> 
-                                    <a href="#">Home</a>
+                                    <a href="/">Home</a>
                                 </li> 
                                 <li>
                                     <i class="bx bx-chevron-right"></i> 
-                                    <a href="#">Catalogue</a>
+                                    <a href="/catalogue">Catalogue</a>
                                 </li> 
                                 <li>
                                     <i class="bx bx-chevron-right"></i> 
-                                    <a href="#">Login</a>
+                                    <a href="/auth/login">Login</a>
                                 </li> 
                                 <li>
                                     <i class="bx bx-chevron-right"></i> 
-                                    <a href="#">Register</a>
+                                    <a href="/auth/register">Register</a>
                                 </li> 
                                 <li>
                                     <i class="bx bx-chevron-right"></i> 
