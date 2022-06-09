@@ -4,6 +4,10 @@ namespace App\Controllers;
 
 class Catalogue extends BaseController
 {
+    public function index()
+    {
+        return view('overall_catalogue');
+    }
     public function suv()
     {
         return view('suv_catalogue');
