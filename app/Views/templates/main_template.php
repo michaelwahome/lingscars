@@ -19,23 +19,161 @@
 
     <!-- CSS -->
     <link href="../css/landing-page-style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="../css/main_template.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
     <title>Lings Cars</title>
 </head>
 <body>
-    
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">LingsCars</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Catalogue</a>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sedan
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Toyota</a></li>
+                                    <li><a class="dropdown-item" href="#">Honda</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">View All</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    SUV
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Toyota</a></li>
+                                    <li><a class="dropdown-item" href="#">Range Rover</a></li>
+                                    <li><a class="dropdown-item" href="#">Volkswagen</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">View All</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Bike
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Yamaha</a></li>
+                                    <li><a class="dropdown-item" href="#">Kawasaki</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">View All</a></li>
+                                </ul>
+                            </li>
+
+                            
+                        </ul>
+
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+
+                        <button class="btn btn-secondary my-0 mx-5">Register</button>
+
+                        <button class="btn btn-primary my-0 ">Log In</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <?php $this->renderSection('content'); ?>
+
+
+        <footer class="mb-0 mt-5" style="bottom: 0;" id="footer"> 
+            
+            <div class="footer-top"> 
+                <div class="container"> 
+                    <div class="row"> 
+                        <div class="col-lg-3 col-md-6 footer-links"> 
+                            <h4>Useful Links</h4> 
+                            <ul> 
+                                <li>
+                                    <i class="bx bx-chevron-right"></i> 
+                                    <a href="#">Home</a>
+                                </li> 
+                                <li>
+                                    <i class="bx bx-chevron-right"></i> 
+                                    <a href="#">Catalogue</a>
+                                </li> 
+                                <li>
+                                    <i class="bx bx-chevron-right"></i> 
+                                    <a href="#">Login</a>
+                                </li> 
+                                <li>
+                                    <i class="bx bx-chevron-right"></i> 
+                                    <a href="#">Register</a>
+                                </li> 
+                                <li>
+                                    <i class="bx bx-chevron-right"></i> 
+                                    <a href="#">Back to Top</a>
+                                </li> 
+                            </ul> 
+                        </div> 
+
+                         
+                        <div class="col-lg-3 col-md-6 footer-contact"> 
+                            <h4>Contact Us</h4> 
+                            <p>                                 
+                                <strong>Phone:</strong> +254 333 433 333
+                                <br> <strong>Email:</strong> ling@fakedomain.com
+                                <br> 
+                            </p> 
+                        </div> 
+
+                        <div class="col-lg-3 col-md-6 footer-info"> 
+                            <h3>About LingsCars</h3> 
+                            <p>We are a recently founded website that aims to deliver you the car of your dreams at no extra effort.</p> 
+                            <div class="social-links mt-3"> 
+                                <a href="#" class="twitter">
+                                    <i class="bx bxl-twitter"></i>
+                                </a> 
+                                <a href="#" class="facebook">
+                                    <i class="bx bxl-facebook"></i>
+                                </a> 
+                                <a href="#" class="instagram">
+                                    <i class="bx bxl-instagram"></i>
+                                </a> 
+                                <a href="#" class="linkedin">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="container"> 
+                <div class="copyright"> &copy; Copyright <strong><span>LingsCars</span></strong>. All Rights Reserved </div> 
+                <div class="credits"> Designed by <a href="#">LingsCars</a> </div> 
+            </div>
+</footer>    
 
 
 
 
 
-
-
-
-
-
-
-
+    </div>
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
