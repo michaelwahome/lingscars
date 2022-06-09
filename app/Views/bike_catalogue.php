@@ -1,47 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet"> 
-    <link href="css/catalogue.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
-    <title>Lings Cars</title>
-</head>
-<body>
-    <div class="row">
-            <div class="col">
-                <div class="dp-ellipse">
-                    <img src="images/man.jpg" alt="">
-                </div>
-            </div>
-            <div class="col">
-            <input onkeyup="search_car()" type="text" name="search" id="searchbar" class="search-bar" placeholder="search">
-            </div>
-            <div class="col">
-                <input type="button" value="log in/sign up" class="btn btn-primary">
-                <!-- <i class="fa fa-shopping-basket" aria-hidden="true"></i> -->
-            </div>
-        </div>
-        <div class="row">
-            <div class="navbar-main">
-                <div class="menu-icon">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-                <div class="container-fluid">
-                    <div class="navbar-brand">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Contact</a>
-                        <a href="#">Shop</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<?php 
+
+    $this->extend('/templates/main_template');
+
+    $this->section('content');
+
+    
+ 
+?>
+
     <!-- this section is the one above the navigation -->
     <section class="top">
 
@@ -126,21 +92,6 @@
             </div>
         </div>
     </section>
-    <script>
-        function search_car() {
-            let input = document.getElementById('searchbar').value
-            input=input.toLowerCase();
-            let x = document.getElementsByClassName('image-and-words');
-            
-            for (i = 0; i < x.length; i++) { 
-                if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                    x[i].style.display="none";
-                }
-                else {
-                    x[i].style.display="";                 
-                }
-            }
-        }
-    </script>
-</body>
-</html> 
+    
+
+<?php $this->endSection();?>

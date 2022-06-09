@@ -21,6 +21,7 @@
 
     <!-- CSS -->
     <link href="../css/landing-page-style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="../css/catalogue.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link href="../css/main_template.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
     <title>Lings Cars</title>
@@ -86,10 +87,10 @@
                             
                         </ul>
 
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        <div class="d-flex" role="search">
+                            <input onkeyup="search_car()" class="form-control me-2" name="search" type="search" id="searchbar" placeholder="Search" aria-label="Search">
+                            <button onclick="search_car()" class="btn btn-outline-success" type="submit">Search</button>
+                        </div>
 
                         <?php
                             if (isset($_SESSION["user_details"])){
@@ -205,5 +206,22 @@
 
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script>
+        function search_car() {
+            let input = document.getElementById('searchbar').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('image-and-words');
+            
+            for (i = 0; i < x.length; i++) { 
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display="none";
+                }
+                else {
+                    x[i].style.display="";                 
+                }
+            }
+        }
+    </script>
 </body>
 </html>

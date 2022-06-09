@@ -9,7 +9,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>User cart</title>
+  <title>Lings Cars</title>
 </head>
 <body>
 
@@ -38,6 +38,7 @@
         <div class="pointer-events-auto w-screen max-w-md">
           <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
             <div class="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+              <a href="/home"><h1 class="text-lg font-bold text-center mb-2 text-indigo-700">LingsCars</h1></a>
               <div class="flex items-start justify-between">
                 <h2 class="text-lg font-semibold text-gray-900" id="slide-over-title">Shopping cart</h2>
                 <div class="ml-3 flex h-7 items-center">
