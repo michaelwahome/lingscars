@@ -2,9 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\UsersModel;
-use App\Models\LoginModel;
-use App\Models\SignUpModel;
+use App\Models\AuthModel;
 
 class Auth extends BaseController
 {
@@ -21,7 +19,7 @@ class Auth extends BaseController
     public function processLogin()
     {
         //1. Create an instance of the model
-		$loginModel = new LoginModel();
+		$authModel = new AuthModel();
 
 		//Temporary checkpoint
 		//echo "Model instance successfully created<br>";
@@ -40,7 +38,7 @@ class Auth extends BaseController
 
 
 	    //3. Method function call
-	    $user_info = $loginModel-> login($email, $password);
+	    $user_info = $authModel-> login($email, $password);
 
 	    // Model Test
 	    //echo "<br><br>Result: ";
@@ -57,7 +55,7 @@ class Auth extends BaseController
 			//-> NOT EMPTY: Create a session to store user info and redirect to admin or home page
 			$session = session();
 			$session->set('user_details', $user_info);
-			return redirect()->to('home');
+			return redirect()->to('/');
 
 		// 	//Admin or User clearance level
         //  1. User role_id -> Redirect to user landing page
@@ -83,7 +81,7 @@ class Auth extends BaseController
 	public function processRegistration()
 	{
 		//1. Create an instance of the model
-		$registerModel = new SignUpModel();
+		$authModel = new AuthModel();
 
 		//TEST
 		echo "Model instance successfully created<br>";
@@ -108,12 +106,22 @@ class Auth extends BaseController
 	    echo "<br>Gender - ".$gender;
 
 	    //3. Method function call
-	    $confirmation = $registerModel->signup($firstname, $lastname, $gender, $email, $password);
+	    $confirmation = $authModel->signup($firstname, $lastname, $gender, $email, $password);
 
 	    //TEST
 	    //echo "<br><br>Result - $confirmation";
 
 	    //4. Redirect to Home page
+		
+		$user_info = $authModel->login($email, $password);
+		$session = session();
+		$session->set('user_details', $user_info);
 	    return redirect()->to('home');
+	}
+
+	public function logout(){
+		$session = session();
+		unset($_SESSION["user_details"]);
+		return redirect()->to("home");
 	}
 }

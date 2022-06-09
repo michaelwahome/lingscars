@@ -96,7 +96,16 @@
                         ?>
                             <a href="#"><button class="btn btn-secondary my-0 mx-5">Cart</button></a>
 
-                            <a href="#"><button class="btn btn-primary my-0 "><?php echo $_SESSION["user_details"]["first_name"]." ".$_SESSION["user_details"]["last_name"];?></button></a>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle my-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?php echo $_SESSION["user_details"]["first_name"]." ".$_SESSION["user_details"]["last_name"];?>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="/auth/logout">Logout</a></li>
+                                </ul>
+                            </div>
 
 
                         <?php
