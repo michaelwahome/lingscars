@@ -15,7 +15,7 @@
           <a href="#"> <?php
              /* Cart::name*/ ?> </a>
         </h3>
-        <p class="ml-4">$90.00</p>
+        <p class="ml-4"><!--Price for singular item--></p>
       </div>
       <p class="mt-1 text-sm text-gray-500"> <!-- Colour of the vehicle --></p>
     </div>
