@@ -46,6 +46,8 @@ $routes->get('/bike_catalogue', 'Catalogue::bike');
 $routes->get('/sedan_catalogue', 'Catalogue::sedan');
 $routes->get('/overall_catalogue', 'Catalogue::overall');
 
+$routes->get('/main', 'Home::temproute');
+
 
 /*
  * --------------------------------------------------------------------
