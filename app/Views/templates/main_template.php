@@ -24,7 +24,7 @@
     <title>Lings Cars</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <!-- <div class="container-fluid"> -->
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
@@ -167,13 +167,13 @@
                 <div class="copyright"> &copy; Copyright <strong><span>LingsCars</span></strong>. All Rights Reserved </div> 
                 <div class="credits"> Designed by <a href="#">LingsCars</a> </div> 
             </div>
-</footer>    
+        </footer>    
 
 
 
 
 
-    </div>
+
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
