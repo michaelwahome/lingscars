@@ -15,7 +15,7 @@ body
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: rgba(242, 4, 4, 0.76);
+    margin-top: .5em;
 }
 .dp-ellipse img
 {
@@ -97,7 +97,7 @@ body
 {
     display: flex;
     justify-content: center;
-    margin-top: -30px;
+    margin-top: -70px;
 }
 .btn.btn-dark
 {

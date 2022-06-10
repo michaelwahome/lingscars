@@ -13,7 +13,7 @@
 
         <div class="row">
             <div class="top-bar">
-                <p><b>Sedans at a family friendly price</b></p>
+                <p>Sedans at a family friendly price</p>
             </div>
         </div>
     </section>    

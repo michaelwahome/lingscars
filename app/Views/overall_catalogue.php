@@ -13,7 +13,7 @@
 
         <div class="row">
             <div class="top-bar">
-                <p><b>Vehicle models</b></p>
+                <p>Vehicle models</p>
             </div>
         </div>
     </section>    

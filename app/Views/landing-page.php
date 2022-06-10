@@ -1,4 +1,5 @@
 <?php 
+    $session = session();
 
     $this->extend('/templates/main_template');
 
@@ -7,6 +8,18 @@
     
  
 ?>
+    <?php if(isset($_SESSION["user_details"])){ ?>
+    <!-- this section is the one above the navigation -->
+    <section class="top">
+
+    <div class="row">
+        <div class="top-bar">
+            <p>Welcome, <?php echo $_SESSION["user_details"]["first_name"];?></p>
+        </div>
+    </div>
+    </section> 
+
+    <?php }  ?>
 
     <!-- this section contains the main picture for the page -->
     <section class="center-page">
