@@ -92,9 +92,7 @@
                             <button onclick="search_car()" class="btn btn-outline-success" type="submit">Search</button>
                         </div>
 
-                        <?php
-                            if (isset($_SESSION["user_details"])){
-                        ?>
+                        <?php    if (isset($_SESSION["user_details"])){   ?>
                             <a href="/cart"><button class="btn btn-secondary my-0 mx-5">Cart</button></a>
 
                             <div class="dropdown">
@@ -109,19 +107,13 @@
                             </div>
 
 
-                        <?php
-
-                            }else{
-
-                        ?>
+                        <?php   }else{    ?>
 
                         <a href="/auth/login"><button class="btn btn-secondary my-0 mx-5">Log In</button></a>
 
                         <a href="/auth/register"><button class="btn btn-primary my-0 ">Sign Up</button></a>
 
-                        <?php   
-                            }
-                        ?>
+                        <?php   }     ?>
                     </div>
                 </div>
             </nav>

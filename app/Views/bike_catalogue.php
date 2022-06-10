@@ -13,7 +13,7 @@
 
         <div class="row">
             <div class="top-bar">
-                <p><b>Experience thrills and high speeds at low costs.</b></p>
+                <p>Experience thrills and high speeds at low costs.</p>
             </div>
         </div>
     </section>    
