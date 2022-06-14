@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
-    <link href="../css/landing-page-style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="../css/catalogue.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link href="../css/main_template.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
     <title>Lings Cars</title>
@@ -85,6 +85,11 @@
 
                             
                         </ul>
+
+                        <div class="d-flex" role="search">
+                            <input onkeyup="search_car()" class="form-control me-2" name="search" type="search" id="searchbar" placeholder="Search" aria-label="Search">
+                            <button onclick="search_car()" class="btn btn-outline-success" type="submit">Search</button>
+                        </div>
 
                         <?php    if (isset($_SESSION["user_details"])){   ?>
                             <a href="/cart"><button class="btn btn-secondary my-0 mx-5">Cart</button></a>
