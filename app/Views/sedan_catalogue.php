@@ -1,6 +1,6 @@
 <?php 
 
-    $this->extend('/templates/main_template');
+    $this->extend('/templates/catalogue_template');
 
     $this->section('content');
 
