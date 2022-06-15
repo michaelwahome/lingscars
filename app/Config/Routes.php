@@ -51,6 +51,16 @@ $routes->get('/maintemplate', 'Home::maintemplate');
 
 
 /*
+ * ------------------------------------
+ * Image CRUD for Admin
+ * -----------------------------------
+ * */
+
+  $routes->get('admin/products', 'ProductController::index');
+$routes->get('admin/products/create', 'ProductController::create');
+$routes->post('admin/products/store', 'ProductController::store');
+
+/*
  * --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
