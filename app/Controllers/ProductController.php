@@ -35,6 +35,7 @@ class ProductController extends BaseController
       $data = [
         /* TODO: other fields that are to be uploaded to the database. Not included in the admin side at all as of now.*/
         /*Functionality of the multiple image upload*/
+        'subcategory_id' => $this->request->getPost('subcategory_id'),
         'vehicle_model' => $this->request->getPost('vehicle_model'),
         'vehicle_description' => $this->request->getPost('vehicle_description'),
         'unit_price' => $this->request->getPost('unit_price'),

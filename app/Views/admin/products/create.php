@@ -18,6 +18,10 @@
 
               <div class="col-md-12">
                 <div class="form-group mb-2">
+                  <label for="name">Subcategory</label>
+                  <input type="text" class="form-control" name="subcategory_id" required placeholder="Enter subcategory">
+                </div>
+                <div class="form-group mb-2">
                   <label for="name">Vehicle Model</label>
                   <input type="text" class="form-control" name="vehicle_model" required placeholder="Enter vehicle model">
                 </div>
