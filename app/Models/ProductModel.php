@@ -5,6 +5,9 @@ use CodeIgniter\Model;
 class ProductModel extends model
 {
   protected $table = 'vehicles';
+
+  protected $primaryKey = 'vehicle_id';
+
   protected $allowedFields =
     [
       'subcategory_id',
