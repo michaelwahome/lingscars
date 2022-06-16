@@ -6,6 +6,17 @@ use CodeIgniter\Model;
 
 class SaleModel extends Model
 {
+	protected $table = 'sales';
+
+	protected $primaryKey = 'sale_id';
+
+	protected $allowedFields =
+		[
+		'user_id',
+		'payment_method_id',
+		'sale_total',
+		];
+
 	public function __construct()
     {
         parent::__construct();
@@ -25,7 +36,6 @@ class SaleModel extends Model
 				'user_id' => $row->user_id, 
 				'payment_method_id' => $row->payment_method_id, 
 				'sale_total'=> $row->sale_total,
-				'sale_date'=> $row->sale_date,
 				'created_at' => $row->created_at, 
 				'updated_at' => $row->updated_at, 
 				'is_deleted' => $row->is_deleted
@@ -49,7 +59,6 @@ class SaleModel extends Model
 				'user_id' => $row->user_id, 
 				'payment_method_id' => $row->payment_method_id, 
 				'sale_total'=> $row->sale_total,
-				'sale_date'=> $row->sale_date,
 				'created_at' => $row->created_at, 
 				'updated_at' => $row->updated_at, 
 				'is_deleted' => $row->is_deleted
@@ -73,7 +82,6 @@ class SaleModel extends Model
 				'user_id' => $row->user_id, 
 				'payment_method_id' => $row->payment_method_id, 
 				'sale_total'=> $row->sale_total,
-				'sale_date'=> $row->sale_date,
 				'created_at' => $row->created_at, 
 				'updated_at' => $row->updated_at, 
 				'is_deleted' => $row->is_deleted

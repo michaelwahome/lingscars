@@ -6,6 +6,17 @@ use CodeIgniter\Model;
 
 class SubcategoryModel extends Model
 {
+	protected $table = 'subcategories';
+
+	protected $primaryKey = 'subcategory_id';
+
+	protected $allowedFields =
+		[
+		'category_id',
+		'subcategory_name',
+		'subcategory_description',
+		];
+
 	public function __construct()
     {
         parent::__construct();
