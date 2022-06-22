@@ -1,87 +1,4 @@
 *
-/* {
-    margin: 0;
-    padding: 0;
-}
-body
-{
-    overflow-x: hidden;
-}
-.dp-ellipse img
-{
-    width: 80px;
-    height: 81px;
-    left: 10px;
-    top: 10px;
-    border-radius: 50%;
-    margin-left: 20px;
-    margin-top: 10px;
-    background: #C4C4C4;
-}
-.search-bar
-{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 21px 19px;
-
-    position: static;
-    width: 341px;
-    height: 62px;
-    left: 402.5px;
-    top: 0px;
-
-    background: #C4C4C4;
-    border-radius: 9.29314px;
-    border: none;
-    margin-top: 25px;
-}
-.btn.btn-primary
-{
-    margin-top: 40px;
-    margin-left: 170px;
-}
-.navbar-main
-{
-    background: #1E1B1B;
-    margin-top: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: flex;
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-}
-.menu-icon
-{
-    display: flex;
-    flex-direction: row;
-}
-.menu-icon p
-{
-    color: #ffffff;
-    font-size: 10px;
-}
-.fa.fa-bars
-{
-    color: #ffffff;
-    margin-top: 5px;
-    margin-left: 30px;
-    font-size: 30px;
-}
-.navbar-brand
-{
-    display: flex;
-    float: right;
-}
-.navbar-brand a
-{
-    text-decoration: none;
-    color: #ffffff;
-    margin-right: 10px;
-    font-size: 17px;
-    cursor: pointer;
-} */
 .top-bar
 {
     width: 100%;
@@ -94,6 +11,60 @@ body
     padding-top: 30px;
     margin-top: 20px;
     margin-bottom: 30px;
+}
+table, td, th
+{
+    border-collapse: collapse;
+    border-bottom: 1px solid #fff;
+}
+table
+{
+    margin-left: -20px;
+}
+td
+{
+  height: auto;
+}
+.td-car
+{
+    width: 700px;
+    height: auto;
+}
+img:hover 
+{
+    position:relative;
+    width:760px;
+    height:auto;
+    display:block;
+}
+.td-words
+{
+    display: flex;
+    flex-direction: column;
+}
+td h2
+{
+    padding-top: 50px;
+    text-align: center;
+}
+td p
+{
+    padding-top: 30px;
+    text-align: justify;
+    width: 400px;
+    margin-left: 30px;
+}
+td b
+{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;   
+}
+td input
+{
+    width: 100px;
+    margin-left: 220px;
+    margin-bottom: 100px;
 }
 .frames
 {
@@ -111,6 +82,7 @@ body
 .frame-two h1
 {
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 .image-and-words
 {
@@ -141,13 +113,7 @@ body
     width: 100%;
     
 }
-.picture img:hover 
-{
-    position:relative;
-    width:760px;
-    height:auto;
-    display:block;
-}
+
 .grey-and-black-words
 {
     display: flex;
