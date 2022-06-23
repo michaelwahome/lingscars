@@ -111,4 +111,17 @@ class CartDetailModel extends Model
 		    return "Unsuccessful";
 		}
 	}
+
+	//This function counts the number of items in a cart by counting the number of rows in the cartdetails table with the same user_id
+	public function countCart($user_id)
+	{
+		$query = $this->db->query("SELECT COUNT(cartdetail_id) AS itemcount FROM cart_details WHERE user_id='$user_id'");
+
+		foreach ($query->getResult() as $row)
+		{
+			$result = $row->itemcount;
+		}
+
+		return $result;
+	}
 }

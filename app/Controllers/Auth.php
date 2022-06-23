@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\AuthModel;
+use App\Models\CartModel;
+use App\Models\CartDetailModel;
 
 class Auth extends BaseController
 {
@@ -18,43 +20,39 @@ class Auth extends BaseController
 
     public function processLogin()
     {
-        //1. Create an instance of the model
+        //Create instances of the models
 		$authModel = new AuthModel();
+		$cartModel = new CartModel();
+		$cartDetailModel = new CartDetailModel();
 
-		//Temporary checkpoint
-		//echo "Model instance successfully created<br>";
-
-		//2. Retrieve form data
+		//Retrieve form data using post
 	    if($this->request->getMethod() === 'post')
 	    {
 	        $email = $this->request->getPost('email');
 	        $password  = $this->request->getPost('password');
 	    }
 
-	    //Temporary Checkpoint
-	    echo "<br>Data retrieved from form successfully!";
-	    echo "<br>Email - ".$email;
-	    echo "<br>Password - ".$password;
-
-
-	    //3. Method function call
+	     //Call actual login function and assign record to user_info
 	    $user_info = $authModel-> login($email, $password);
 
-	    // Model Test
-	    //echo "<br><br>Result: ";
-	    //print_r($user_info);
-
-	    //4. If array is empty:
 		if(empty($user_info))
 		{
-			//-> EMPTY: Redirect to login page
+			//Redirect to login page if login fails i.e. if user_info is empty
 			return redirect()->to('auth/login');
 		}
 		else
 		{
-			//-> NOT EMPTY: Create a session to store user info and redirect to admin or home page
+			//Retrieve user cart from db and add it to user_info
+			$user_info["cart"] = $cartModel->selectOne($user_info["user_id"]);
+
+			//Retrieve number of items in cart from db and add it to user_info
+			$user_info["itemcount"] = $cartDetailModel->countCart($user_info["user_id"]);
+
+			//Initialise a session and pass user_info to the session
 			$session = session();
 			$session->set('user_details', $user_info);
+
+			//Redirect to Home page
 			return redirect()->to('/');
 
 		// 	//Admin or User clearance level
@@ -80,14 +78,12 @@ class Auth extends BaseController
 
 	public function processRegistration()
 	{
-		//1. Create an instance of the model
+		//Create instances of the models
 		$authModel = new AuthModel();
+		$cartModel = new CartModel();
+		$cartDetailModel = new CartDetailModel();
 
-		//TEST
-		echo "Model instance successfully created<br>";
-
-		//2. Data retrieval
-		//-> Retrieve form data from register()
+		//Retrieve form data using post
 		if($this->request->getMethod() === 'post')
 		{
 	        $firstname = $this->request->getPost('fname');
@@ -97,25 +93,26 @@ class Auth extends BaseController
 			$password = $this->request->getPost('password');
 	    }
 
-		//Temporary Checkpoint
-	    echo "<br>Data retrieved from form successfully!";
-		echo "<br>Email - ".$email;
-		echo "<br>Password - ".$password;
-		echo "<br>First Name - ".$firstname;
-	    echo "<br>Last Name - ".$lastname;
-	    echo "<br>Gender - ".$gender;
-
-	    //3. Method function call
+	    //Call actual signup function
 	    $confirmation = $authModel->signup($firstname, $lastname, $gender, $email, $password);
 
-	    //TEST
-	    //echo "<br><br>Result - $confirmation";
-
-	    //4. Redirect to Home page
-		
+	    //Use login function to retireve registered user details and assign to user_info
 		$user_info = $authModel->login($email, $password);
+
+		//Add a new cart for user using their retrieved user_id
+		$cartModel->addRecord($user_info["user_id"]);
+
+		//Retrieve user cart from db and add it to user_info
+		$user_info["cart"] = $cartModel->selectOne($user_info["user_id"]);
+
+		//Retrieve number of items in cart from db and add it to user_info
+		$user_info["itemcount"] = $cartDetailModel->countCart($user_info["user_id"]);
+
+		//Initialise a session and pass user_info to the session
 		$session = session();
 		$session->set('user_details', $user_info);
+
+		//Redirect to Home page
 	    return redirect()->to('home');
 	}
 

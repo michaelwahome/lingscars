@@ -61,9 +61,9 @@ class CartModel extends Model
 	}
 
 	//This function adds a record to the table
-	public function addRecord($user_id, $cart_total)
+	public function addRecord($user_id)
 	{
-		if ($this->db->query("INSERT INTO carts (user_id, cart_total) VALUES ('$user_id', '$cart_total')"))
+		if ($this->db->query("INSERT INTO carts (user_id) VALUES ('$user_id')"))
 		{
 		    return "Successful";
 		}

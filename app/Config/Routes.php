@@ -56,9 +56,9 @@ $routes->get('/maintemplate', 'Home::maintemplate');
  * -----------------------------------
  * */
 
-  $routes->get('admin/vehicles', 'VehicleController::index');
-$routes->get('admin/vehicles/create', 'VehicleController::create');
-$routes->post('admin/vehicles/store', 'VehicleController::store');
+  $routes->get('admin/vehicles', 'Vehicle::index');
+$routes->get('admin/vehicles/create', 'Vehicle::create');
+$routes->post('admin/vehicles/store', 'Vehicle::store');
 
 /*
  * --------------------------------------------------------------------

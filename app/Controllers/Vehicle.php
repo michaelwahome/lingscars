@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\VehicleModel;
 
-class VehicleController extends BaseController
+class Vehicle extends BaseController
 {
     public function index()
     {
