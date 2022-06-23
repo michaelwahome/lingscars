@@ -49,6 +49,9 @@ $routes->get('/overall_catalogue', 'Catalogue::overall');
 
 $routes->get('/maintemplate', 'Home::maintemplate');
 
+$routes->post('vehicle', 'Vehicle::vehicle');
+
+$routes->post('addtocart', 'Cart::addToCart');
 
 /*
  * ------------------------------------

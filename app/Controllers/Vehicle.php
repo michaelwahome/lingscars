@@ -8,12 +8,25 @@ class Vehicle extends BaseController
 {
     public function index()
     {
-        return view('admin/vehicles/index'); // Change this view
+      return view('admin/vehicles/index'); // Change this view
     }
+
+    
     public function create()
     {
       return view('admin/vehicles/create');
     }
+
+
+    public function vehicle()
+    {
+      $vehicleModel = new VehicleModel();
+
+      $vehicle_id = $this->request->getPost('vehicle_id');
+      $data["vehicle"] = $vehicleModel->selectOne($vehicle_id);
+      return view('vehicle', $data);
+    }
+    
 
   /**
    * @throws \ReflectionException
