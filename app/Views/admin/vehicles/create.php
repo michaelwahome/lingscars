@@ -8,12 +8,12 @@
       <div class="card">
         <div class="card-header">
           <h5>
-            Create Products
-            <a href="<?= base_url('/admin/products') ?>" class="btn btn-danger btn-sm float-end">Back</a>
+            Add Vehicles
+            <a href="<?= base_url('/admin/vehicles') ?>" class="btn btn-danger btn-sm float-end">Back</a>
           </h5>
         </div>
         <div class="card-body">
-          <form action="<?= base_url('/admin/products/store') ?>" method="post" enctype="multipart/form-data">
+          <form action="<?= base_url('/admin/vehicles/store') ?>" method="post" enctype="multipart/form-data">
             <div class="row">
 
               <div class="col-md-12">
@@ -27,11 +27,11 @@
                 </div>
                 <div class="form-group mb-2">
                   <label for="description">Description</label>
-                  <input type="text" class="form-control" name="description" required placeholder="Enter product description">
+                  <input type="text" class="form-control" name="description" required placeholder="Enter vehicle description">
                 </div>
                 <div class="form-group mb-2">
                   <label for="price">Price</label>
-                  <input type="text" class="form-control" name="unit_price" required placeholder="Enter product price">
+                  <input type="text" class="form-control" name="unit_price" required placeholder="Enter vehicle price">
                 </div>
                 <div class="form-group mb-2">
                   <label for="price">Quantity Available</label>
@@ -74,7 +74,7 @@
 
                 <div class="form-group mb-2">
                   <label for="name">Image</label>
-                  <input type="file" class="form-control" name="images[]" required placeholder="Enter product image" multiple>
+                  <input type="file" class="form-control" name="images[]" required placeholder="Enter vehicle image" multiple>
                 </div>
               </div>
               <div class="col-md12">

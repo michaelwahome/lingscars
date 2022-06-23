@@ -2,17 +2,17 @@
 
 namespace App\Controllers;
 
-use App\Models\ProductModel;
+use App\Models\VehicleModel;
 
-class ProductController extends BaseController
+class VehicleController extends BaseController
 {
     public function index()
     {
-        return view('admin/products/index'); // Change this view
+        return view('admin/vehicles/index'); // Change this view
     }
     public function create()
     {
-      return view('admin/products/create');
+      return view('admin/vehicles/create');
     }
 
   /**
@@ -20,7 +20,7 @@ class ProductController extends BaseController
    */
   public function store()
     {
-      $product = new ProductModel();
+      $vehicle = new VehicleModel();
       /*
        * Multiple file uploads trial
        * */
@@ -49,8 +49,8 @@ class ProductController extends BaseController
         'color' => $this->request->getPost('color'),
         'image' => $newName
       ];
-      $product->save($data);
-      return redirect()->to('admin/products')->with('status', 'Product saved');
+      $vehicle->save($data);
+      return redirect()->to('admin/vehicles')->with('status', 'Vehicle saved');
 
     }
 

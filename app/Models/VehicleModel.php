@@ -2,12 +2,29 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class ProductModel extends model
+class VehicleModel extends model
 {
 
-	protected $allowedFields=['vehicle_id',	'subcategory_id',	'vehicle_model'	,'unit_price',	'available_quantity'	,'image',	'vehicle_description',	'manufacturer'	,'year_of_manufacture',	'mileage',	'registration',	'vehicle_condition',	'serial_number',	'color'	,'created_at'	,'updated_at',	'is_deleted'];
-    protected $primaryKey='vehicle_id';
     protected $table='vehicles';
+
+    protected $primaryKey='vehicle_id';
+
+	protected $allowedFields =
+		[
+		'subcategory_id',
+		'vehicle_model'	,
+		'unit_price',	
+		'available_quantity',
+		'image',	
+		'vehicle_description',	
+		'manufacturer',
+		'year_of_manufacture',	
+		'mileage',	
+		'registration',	
+		'vehicle_condition',	
+		'serial_number',	
+		'color'
+		];
 
 	public function __construct()
     {

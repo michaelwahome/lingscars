@@ -14,8 +14,8 @@
       <div class="card">
         <div class="card-header">
           <h5>
-            Products
-            <a href="<?= base_url('/admin/products/create') ?>" class="btn btn-primary btn-sm float-end">Add</a> <!--Not sure if the base URL is functional-->
+            Vehicles
+            <a href="<?= base_url('/admin/vehicles/create') ?>" class="btn btn-primary btn-sm float-end">Add</a> <!--Not sure if the base URL is functional-->
           </h5>
         </div>
         <div class="card-body">

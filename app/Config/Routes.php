@@ -56,9 +56,9 @@ $routes->get('/maintemplate', 'Home::maintemplate');
  * -----------------------------------
  * */
 
-  $routes->get('admin/products', 'ProductController::index');
-$routes->get('admin/products/create', 'ProductController::create');
-$routes->post('admin/products/store', 'ProductController::store');
+  $routes->get('admin/vehicles', 'VehicleController::index');
+$routes->get('admin/vehicles/create', 'VehicleController::create');
+$routes->post('admin/vehicles/store', 'VehicleController::store');
 
 /*
  * --------------------------------------------------------------------
