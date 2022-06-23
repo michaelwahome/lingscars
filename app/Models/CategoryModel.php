@@ -6,6 +6,16 @@ use CodeIgniter\Model;
 
 class CategoryModel extends Model
 {
+	protected $table = 'categories';
+
+	protected $primaryKey = 'category_id';
+
+	protected $allowedFields =
+		[
+		'category_name',
+		'category_description',
+		];
+
 	public function __construct()
     {
         parent::__construct();

@@ -6,6 +6,19 @@ use CodeIgniter\Model;
 
 class SaleDetailModel extends Model
 {
+	protected $table = 'sale_details';
+
+	protected $primaryKey = 'saledetail_id';
+
+	protected $allowedFields =
+		[
+		'sale_id',
+		'vehicle_id',
+		'unit_price',
+		'quantity',
+		'subtotal',
+		];
+
 	public function __construct()
     {
         parent::__construct();

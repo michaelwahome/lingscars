@@ -6,6 +6,19 @@ use CodeIgniter\Model;
 
 class CartDetailModel extends Model
 {
+	protected $table = 'cart_details';
+
+	protected $primaryKey = 'cartdetail_id';
+
+	protected $allowedFields =
+		[
+		'user_id',
+		'vehicle_id',
+		'unit_price',
+		'quantity',
+		'subtotal',
+		];
+
 	public function __construct()
     {
         parent::__construct();
