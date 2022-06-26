@@ -13,14 +13,17 @@
 <div class="container">
 
   <section class="top">
+    <div class="row">
+        <div class="top-bar">
+            <p><?php echo $_SESSION["user_details"]["first_name"];?>'s Cart</p>
+        </div>
+    </div>
+  </section> 
 
   <div class="row">
-      <div class="top-bar">
-          <p><?php echo $_SESSION["user_details"]["first_name"];?>'s Cart</p>
-      </div>
-      <p style="text-align: center; font-size: 2em;"><b>Current total: €<?php echo $cart_total ?></b></p>      
+    <p style="text-align: center; font-size: 2em;"><b>Current total: €<?php echo $cart_total ?></b></p>   
+    <a href="/checkout" style="width: 40vw; padding: 10px; margin: 0 auto; text-align: center; font-size: 2em; text-decoration: none; background: black; color: white; border-radius: 20px;">Proceed to Checkout</a>   
   </div>
-  </section> 
 
   <?php foreach($vehicle as $car) { ?>
   <hr>
@@ -52,6 +55,13 @@
       </div>
     </form>
   <?php } ?>
+
+
+  <div class="row">
+    <a href="/checkout" style="width: 40vw; padding: 10px; margin: 0 auto; text-align: center; font-size: 2em; text-decoration: none; background: black; color: white; border-radius: 20px;">Proceed to Checkout</a>   
+  </div>
+
+
 </div>
 
 

@@ -8,9 +8,4 @@ class Home extends BaseController
     {
         return view('landing-page');
     }
-
-    public function maintemplate()
-    {
-        return view ('templates/main_template');
-    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\VehicleModel;
 
 class Catalogue extends BaseController

@@ -59,6 +59,8 @@ $routes->post('editquantity', 'Cart::editQuantity');
 
 $routes->get('removeitem', 'Cart::removeItem');
 
+$routes->get('checkout', 'Sale::checkout');
+
 /*
  * ------------------------------------
  * Image CRUD for Admin

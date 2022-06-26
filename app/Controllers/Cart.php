@@ -1,10 +1,10 @@
 <?php
 
-  namespace App\Controllers;
+namespace App\Controllers;
 
-  use App\Models\VehicleModel;
-  use App\Models\CartModel;
-  use App\Models\CartDetailModel;
+use App\Models\VehicleModel;
+use App\Models\CartModel;
+use App\Models\CartDetailModel;
 
 class Cart extends BaseController
 {
