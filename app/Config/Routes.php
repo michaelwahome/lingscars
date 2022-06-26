@@ -49,9 +49,15 @@ $routes->get('/overall_catalogue', 'Catalogue::overall');
 
 $routes->get('/maintemplate', 'Home::maintemplate');
 
-$routes->post('vehicle', 'Vehicle::vehicle');
+$routes->post('vehicle', 'Cart::vehicle');
 
 $routes->post('addtocart', 'Cart::addToCart');
+
+$routes->post('editcart', 'Cart::editCart');
+
+$routes->post('editquantity', 'Cart::editQuantity');
+
+$routes->get('removeitem', 'Cart::removeItem');
 
 /*
  * ------------------------------------

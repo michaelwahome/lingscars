@@ -12,13 +12,13 @@
     <section class="top">
         <div class="row">
             <div class="top-bar">
-                <p>Choose a quantity and click add to cart</p>
+                <p>Edit the quantity and click add to cart</p>
             </div>
         </div>
     </section>  
     
     <div class="container">
-        <form action="addtocart" method="post">
+        <form action="editquantity" method="post">
         <div style="padding: 10px;" class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-6">
@@ -30,8 +30,9 @@
                         <p class="card-text"><?php echo $vehicle['vehicle_description']; ?></p>
                         <p><b>Price: €<?php echo $vehicle['unit_price']; ?></b></p>
                         <label for="quantity">Choose a quantity:  </label>
-                        <input type="number" name="quantity" value="1" max=<?php echo $vehicle['available_quantity']; ?> min = 1>
+                        <input type="number" name="quantity" value=<?php echo $cartdetail['quantity']; ?> max=<?php echo $vehicle['available_quantity']; ?> min = 1>
                     </div>
+                    <input type="text" style="display: none;" name="cartdetail_id" value="<?php echo $cartdetail["cartdetail_id"]; ?>">
                     <button style="margin: 0 225px 0 0;" type="submit" name="vehicle_id" value="<?php echo $vehicle['vehicle_id']; ?>" class="btn btn-dark text-center">
                         Add to Cart
                     </button>

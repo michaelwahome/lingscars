@@ -45,7 +45,7 @@
                                         <td class="td-words align-items-center">
                                             <h2 class="vehicle_name"><b><?php echo $row['vehicle_model']; ?></b></h2>
                                             <p><?php echo $row['vehicle_description']; ?></p>
-                                            <b>€<?php echo $row['unit_price']; ?></b>
+                                            <b>Price: €<?php echo $row['unit_price']; ?></b>
                                             <input type="text" style="display: none;" name="vehicle_id" value="<?php echo $row['vehicle_id']; ?>">
                                             <?php if(isset($_SESSION["user_details"])){ ?>
                                                 <input style="margin-right: 210px;" type="submit" value="Add to Cart" class="btn btn-dark">

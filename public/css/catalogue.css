@@ -27,13 +27,13 @@ td
 }
 .td-car
 {
-    width: 700px;
+    width: 600px;
     height: auto;
 }
 img:hover 
 {
     position:relative;
-    width:760px;
+    width:700px;
     height:auto;
     display:block;
 }

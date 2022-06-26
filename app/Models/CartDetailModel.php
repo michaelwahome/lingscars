@@ -102,7 +102,20 @@ class CartDetailModel extends Model
 	//This function adds a record to the table
 	public function addRecord($user_id, $vehicle_id, $unit_price, $quantity, $subtotal)
 	{
-		if ($this->db->query("INSERT INTO carts (user_id, vehicle_id, unit_price, quantity, subtotal) VALUES ('$user_id', '$vehicle_id', '$unit_price', '$quantity', '$subtotal')"))
+		if ($this->db->query("INSERT INTO cart_details (user_id, vehicle_id, unit_price, quantity, subtotal) VALUES ('$user_id', '$vehicle_id', '$unit_price', '$quantity', '$subtotal')"))
+		{
+		    return "Successful";
+		}
+		else
+		{
+		    return "Unsuccessful";
+		}
+	}
+
+	//This function deletes an item in a cart based on the primary key
+	public function deleteOne($cartdetail_id)
+	{
+		if ($this->db->query("DELETE FROM cart_details WHERE cartdetail_id = '$cartdetail_id'"))
 		{
 		    return "Successful";
 		}
@@ -120,6 +133,19 @@ class CartDetailModel extends Model
 		foreach ($query->getResult() as $row)
 		{
 			$result = $row->itemcount;
+		}
+
+		return $result;
+	}
+
+	//This function finds the cart total by summing the subtotals of rows with the same in the cartdetails table with the same user_id
+	public function sumCart($user_id)
+	{
+		$query = $this->db->query("SELECT SUM(subtotal) AS carttotal FROM cart_details WHERE user_id ='$user_id'");
+
+		foreach ($query->getResult() as $row)
+		{
+			$result = $row->carttotal;
 		}
 
 		return $result;

@@ -16,16 +16,6 @@ class Vehicle extends BaseController
     {
       return view('admin/vehicles/create');
     }
-
-
-    public function vehicle()
-    {
-      $vehicleModel = new VehicleModel();
-
-      $vehicle_id = $this->request->getPost('vehicle_id');
-      $data["vehicle"] = $vehicleModel->selectOne($vehicle_id);
-      return view('vehicle', $data);
-    }
     
 
   /**
