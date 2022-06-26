@@ -28,11 +28,7 @@
                 <img src="../images/main-image.png" alt="">
             </div>
         </div>
-        <?php if(isset($_SESSION["user_details"])){ ?>
-            <a href="/catalogue"><input type="button" value="Shop now" class="btn btn-dark"></a>
-        <?php } else { ?>
-            <a href="/auth/register"><input type="button" value="Shop now" class="btn btn-dark"></a>
-        <?php } ?>
+        <a href="/catalogue"><input type="button" value="Shop now" class="btn btn-dark"></a>
     </section>
     
      <!-- this section contains the main picture for the page -->

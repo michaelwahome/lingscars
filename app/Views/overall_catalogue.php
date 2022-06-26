@@ -1,4 +1,5 @@
 <?php 
+     $session = session();
 
     $this->extend('/templates/catalogue_template');
 
@@ -48,10 +49,12 @@
                                     <h2 class="vehicle_name"><b><?php echo $row['vehicle_model']; ?></b></h2>
                                     <p><?php echo $row['vehicle_description']; ?></p>
                                     <b>€<?php echo $row['unit_price']; ?></b>
-                                    <button type="submit" name="vehicle_id" value="<?php echo $row['vehicle_id']; ?>" class="btn btn-dark">
-                                        Add to Cart
-                                    </button>
-                                
+                                    <input type="text" style="display: none;" name="vehicle_id" value="<?php echo $row['vehicle_id']; ?>">
+                                    <?php if(isset($_SESSION["user_details"])){ ?>
+                                        <input style="margin-right: 210px;" type="submit" value="Add to Cart" class="btn btn-dark">
+                                    <?php } else { ?>
+                                        <a href="/auth/register"><input style="margin-right: 210px;" type="button" value="Add to Cart" class="btn btn-dark"></a>
+                                    <?php } ?>                                
                                 </td>
 
                             </tr>
