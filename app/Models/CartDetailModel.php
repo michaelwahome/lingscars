@@ -56,6 +56,8 @@ class CartDetailModel extends Model
 
 		$i = 0;
 
+		$result[$i] = 0;
+
 		foreach ($query->getResult() as $row)
 		{
 			$result[$i] = array(

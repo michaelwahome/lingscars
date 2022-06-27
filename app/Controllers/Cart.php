@@ -17,6 +17,11 @@ class Cart extends BaseController
     $user_id = $_SESSION["user_details"]["user_id"];
     $items = $cartDetailModel->selectUsingUserId($user_id);
 
+    if($items[0] == 0)
+    {
+      return view('empty_cart');
+    }
+
     $i = 0;
 
     foreach($items as $row)
