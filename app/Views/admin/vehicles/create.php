@@ -27,7 +27,8 @@
                 </div>
                 <div class="form-group mb-2">
                   <label for="description">Description</label>
-                  <input type="text" class="form-control" name="description" required placeholder="Enter vehicle description">
+                  <textarea class="form-control" type="text" maxlength="500" required placeholder="Enter vehicle description" name="vehicle_description"></textarea>
+                  <!--<input type="text" class="form-control" name="vehicle_description" required placeholder="Enter vehicle description">-->
                 </div>
                 <div class="form-group mb-2">
                   <label for="price">Price</label>
@@ -65,13 +66,6 @@
                   <label for="price">Colour</label>
                   <input type="text" class="form-control" name="color" required placeholder="Enter vehicle colour">
                 </div>
-
-
-
-
-
-
-
                 <div class="form-group mb-2">
                   <label for="name">Image</label>
                   <input type="file" class="form-control" name="images[]" required placeholder="Enter vehicle image" multiple>
