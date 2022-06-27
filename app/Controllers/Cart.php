@@ -128,7 +128,7 @@ class Cart extends BaseController
     ];
     $cartModel->update($user_id, $data2);
 
-    return redirect()->to('overall_catalogue');
+    return redirect()->to('cart');
 
   }
 
