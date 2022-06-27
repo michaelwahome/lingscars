@@ -53,7 +53,7 @@
                                     <?php if(isset($_SESSION["user_details"])){ ?>
                                         <input style="margin-right: 210px;" type="submit" value="Add to Cart" class="btn btn-dark">
                                     <?php } else { ?>
-                                        <a href="/auth/register"><input style="margin-right: 210px;" type="button" value="Add to Cart" class="btn btn-dark"></a>
+                                        <a href="/auth/register" style="margin-right: 400px; width: 10vw; text-align: center;"><input type="button" value="Add to Cart" class="btn btn-dark"></a>
                                     <?php } ?>                                
                                 </td>
 
