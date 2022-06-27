@@ -49,6 +49,7 @@ class Cart extends BaseController
 //    Function to remove items from the cart
   public function removeItem()
   {
+    $cartModel = new CartModel();
     $cartDetailModel = new CartDetailModel();
 
     $session = session();
@@ -58,10 +59,18 @@ class Cart extends BaseController
     $_SESSION["user_details"]["itemcount"]--;
     unset($_SESSION['deletecartdetail_id']);
 
+    $user_id = $_SESSION["user_details"]["user_id"];
+    $cart_total = $this->cartTotal();
+    $data2 =
+    [
+      'cart_total' => $cart_total,
+    ];
+    $cartModel->update($user_id, $data2);
+
     return redirect()->to('cart');
   }
 
-//  Function to calculate the total for a customer's basket
+//  Function to calculate the total for a customer's cart
   public function cartTotal()
   {
     $cartDetailModel = new CartDetailModel();
@@ -111,6 +120,14 @@ class Cart extends BaseController
     ];
     $cartDetailModel->save($data);
     $_SESSION["user_details"]["itemcount"]++;
+
+    $cart_total = $this->cartTotal();
+    $data2 =
+    [
+      'cart_total' => $cart_total,
+    ];
+    $cartModel->update($user_id, $data2);
+
     return redirect()->to('overall_catalogue');
 
   }
@@ -142,6 +159,7 @@ class Cart extends BaseController
 //Function to edit quantity of item in user's cart
   public function editQuantity()
   {
+    $cartModel = new cartModel();
     $cartDetailModel = new CartDetailModel();
     $vehicleModel = new VehicleModel();
 
@@ -161,6 +179,15 @@ class Cart extends BaseController
     ];
 
     $cartDetailModel->update($id, $data);
+
+    $session = session();
+    $user_id = $_SESSION["user_details"]["user_id"];
+    $cart_total = $this->cartTotal();
+    $data2 =
+    [
+      'cart_total' => $cart_total,
+    ];
+    $cartModel->update($user_id, $data2);
 
     return redirect()->to('cart');
   }

@@ -127,6 +127,19 @@ class CartDetailModel extends Model
 		}
 	}
 
+	//This function deletes some items in a cart based on the foreign key
+	public function deleteSome($user_id)
+	{
+		if ($this->db->query("DELETE FROM cart_details WHERE user_id = '$user_id'"))
+		{
+		    return "Successful";
+		}
+		else
+		{
+		    return "Unsuccessful";
+		}
+	}
+
 	//This function counts the number of items in a cart by counting the number of rows in the cartdetails table with the same user_id
 	public function countCart($user_id)
 	{

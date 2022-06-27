@@ -72,4 +72,17 @@ class CartModel extends Model
 		    return "Unsuccessful";
 		}
 	}
+
+	//This function deletes a cart based on the primary key
+	public function deleteOne($user_id)
+	{
+		if ($this->db->query("DELETE FROM carts WHERE user_id = '$user_id'"))
+		{
+		    return "Successful";
+		}
+		else
+		{
+		    return "Unsuccessful";
+		}
+	}
 }

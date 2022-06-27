@@ -103,4 +103,25 @@ class SaleModel extends Model
 		    return "Unsuccessful";
 		}
 	}
+
+	//This function selects the entered last record in the table with the specified user_id
+	public function selectLast($user_id)
+	{
+		$query = $this->db->query("SELECT * FROM sales WHERE user_id='$user_id' ORDER BY sale_id DESC LIMIT 1");
+
+		foreach ($query->getResult() as $row)
+		{
+			$result = array(
+				'sale_id' => $row->sale_id, 
+				'user_id' => $row->user_id, 
+				'payment_method_id' => $row->payment_method_id, 
+				'sale_total'=> $row->sale_total,
+				'created_at' => $row->created_at, 
+				'updated_at' => $row->updated_at, 
+				'is_deleted' => $row->is_deleted
+			);
+		}
+
+		return $result;	
+	}
 }

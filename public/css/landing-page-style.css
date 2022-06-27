@@ -349,3 +349,118 @@ footer h1
     text-align: center;
     color: rgba(30, 22, 22, 0.484);
 }
+
+
+
+/*checkout flip cards*/
+.checkout-flip-cards-div
+{
+    display: flex; 
+    justify-content: space-evenly; 
+    width: 100vw; 
+    height: 60vh;
+}
+.checkout-flip-card
+{
+    background-color: transparent; 
+    width: 40%; 
+    height: auto; 
+    border: 1px solid #f1f1f1;
+    border-radius: 15px;
+    perspective: 1000px;
+}
+.checkout-inner-flip-card
+{
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    text-align: center; 
+    transition: transform 0.8s; 
+    transform-style: preserve-3d;
+}
+.checkout-flip-card:hover .checkout-inner-flip-card
+{
+    transform: rotateY(180deg);
+}
+.checkout-flip-card-front, .checkout-flip-card-back
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-flip-card-back
+{
+    background: #C4C4C4;
+    transform: rotateY(180deg);
+}
+.checkout-flip-card-front-one
+{
+    background: #3AA335;
+    color: white;
+}
+.checkout-flip-card-front-two
+{
+    background: #1434CB;
+    color: #F7B600;
+}
+.checkout-flip-card-back-list
+{
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+.checkout-flip-card-back-list a
+{
+    border-radius: 0 0 15px 15px; 
+    text-align: center; 
+    font-size: 2em; 
+    text-decoration: none;
+}
+.checkout-flip-card-back-list-one
+{
+    font-size: 1.03em;
+}
+.checkout-flip-card-back-list-one a
+{
+    margin-top: 0px; 
+    background: #3AA335;
+}
+.checkout-flip-card-back-list-one a li
+{
+    background: transparent;
+    color: white;
+}
+.checkout-flip-card-back-list-two
+{
+    font-size: 1.35em;
+}
+.checkout-flip-card-back-list-two a
+{
+    margin-top: 15px;
+    background: #F7B600;
+}
+.checkout-flip-card-back-list-two a li
+{
+    background: transparent;
+    color: #1434CB;
+}
+.checkout-flip-card-back-list-one input
+{
+    color: #3AA335;
+}
+.checkout-flip-card-back-list-two input
+{
+    color: #1434CB; 
+}
+.checkout-flip-cards-div h1
+{
+    font-weight: bold;
+    font-size: 3em;
+}

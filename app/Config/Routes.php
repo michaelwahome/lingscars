@@ -61,6 +61,8 @@ $routes->get('removeitem', 'Cart::removeItem');
 
 $routes->get('checkout', 'Sale::checkout');
 
+$routes->get('purchase/(:any)', 'Sale::purchase/$1');
+
 /*
  * ------------------------------------
  * Image CRUD for Admin
