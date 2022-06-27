@@ -22,7 +22,7 @@
         <div style="padding: 10px;" class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-6">
-                    <img style="width: 40vw; height: auto;" src="<?php echo $vehicle['image']; ?>" class="img-fluid rounded-start" alt="Vehicle image">
+                    <img style="width: 40vw; height: auto;" src="../public/uploads/<?php echo $vehicle['image']; ?>" class="img-fluid rounded-start" alt="Vehicle image">
                 </div>
                 <div class="col-md-6">
                     <div class="card-body text-center">

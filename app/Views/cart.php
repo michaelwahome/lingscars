@@ -31,7 +31,7 @@
       <div style="border:none;" class="card mb-3">
         <div class="row g-0">
             <div class="col-md-7">
-                <img style="width: 60vw; height: auto;" src="<?php echo $car["vehicle_details"]['image']; ?>" class="img-fluid rounded-start" alt="Vehicle image">
+                <img style="width: 60vw; height: auto;" src="../public/uploads/<?php echo $car["vehicle_details"]['image']; ?>" class="img-fluid rounded-start" alt="Vehicle image">
             </div>
             <div class="col-md-5">
               <div style="text-align: right; margin: 20px 20px 0 0;">

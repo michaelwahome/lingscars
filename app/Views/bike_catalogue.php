@@ -40,7 +40,7 @@
 
                                     <?php if($row['category_id'] == 3): ?>
 
-                                        <td class="td-car"><img src="<?php echo $row['image']; ?>" alt="Vehicle Image" srcset=""></td>
+                                        <td class="td-car"><img src="../public/uploads/<?php echo $row['image']; ?>" alt="Vehicle Image" srcset=""></td>
                                         
                                         <td class="td-words align-items-center">
                                             <h2 class="vehicle_name"><b><?php echo $row['vehicle_model']; ?></b></h2>
