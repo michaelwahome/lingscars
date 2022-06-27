@@ -69,9 +69,11 @@ $routes->get('purchase/(:any)', 'Sale::purchase/$1');
  * -----------------------------------
  * */
 
-  $routes->get('admin/vehicles', 'Vehicle::index');
+$routes->get('admin/vehicles', 'Vehicle::index');
 $routes->get('admin/vehicles/create', 'Vehicle::create');
 $routes->post('admin/vehicles/store', 'Vehicle::store');
+$routes->get('admin/vehicles/edit/(:num)','Vehicle::edit/$1');
+$routes->put('admin/vehicles/update/(:num)', 'Vehicle::update/$1' );
 
 /*
  * --------------------------------------------------------------------
