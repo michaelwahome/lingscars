@@ -32,9 +32,13 @@
                         <label for="quantity">Choose a quantity:  </label>
                         <input type="number" name="quantity" value="1" max=<?php echo $vehicle['available_quantity']; ?> min = 1>
                     </div>
-                    <button style="margin: 0 225px 0 0;" type="submit" name="vehicle_id" value="<?php echo $vehicle['vehicle_id']; ?>" class="btn btn-dark text-center">
-                        Add to Cart
-                    </button>
+                    <?php if(isset($_SESSION["user_details"])){ ?>
+                        <button style="margin: 0 225px 0 0;" type="submit" name="vehicle_id" value="<?php echo $vehicle['vehicle_id']; ?>" class="btn btn-dark text-center">
+                            Add to Cart
+                        </button>
+                    <?php } else { ?>
+                        <a href="/auth/register" style="margin-right: 350px; width: 10vw; text-align: center;"><input style="transform: translate(-70px, 320px);" type="button" value="Add to Cart" class="btn btn-dark"></a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
