@@ -171,6 +171,77 @@ class VehicleModel extends model
 		return $result;	
 	}
 
+	//This function selects three records from the table
+	public function selectThree()
+	{
+		$query = $this->db->query("SELECT * FROM vehicles LIMIT 3");
+		$i = 0;
+		$result[$i] = 0;
+
+		foreach ($query->getResult() as $row)
+		{
+			$result[$i] = array(
+				'vehicle_id' => $row->vehicle_id, 
+				'subcategory_id' => $row->subcategory_id, 
+				'vehicle_model'=> $row->vehicle_model, 
+				'unit_price'=> $row->unit_price, 
+				'available_quantity' => $row->available_quantity, 
+				'image' => $row->image, 
+				'vehicle_description' => $row->vehicle_description, 
+				'manufacturer' => $row->manufacturer, 
+				'year_of_manufacture' => $row->year_of_manufacture, 
+				'mileage' => $row->mileage, 
+				'registration' => $row->registration, 
+				'vehicle_condition' => $row->vehicle_condition, 
+				'serial_number' => $row->serial_number, 
+				'color' => $row->color, 
+				'created_at' => $row->created_at, 
+				'updated_at' => $row->updated_at, 
+				'is_deleted' => $row->is_deleted
+			);
+
+			$i++;
+		}
+
+		return $result;
+	}
+
+	//This function selects the next three records from the table
+	public function selectNextThree()
+	{
+		$query = $this->db->query("SELECT * FROM vehicles LIMIT 3 OFFSET 3");
+		$i = 0;
+		$result[$i] = 0;
+
+		foreach ($query->getResult() as $row)
+		{
+			$result[$i] = array(
+				'vehicle_id' => $row->vehicle_id, 
+				'subcategory_id' => $row->subcategory_id, 
+				'vehicle_model'=> $row->vehicle_model, 
+				'unit_price'=> $row->unit_price, 
+				'available_quantity' => $row->available_quantity, 
+				'image' => $row->image, 
+				'vehicle_description' => $row->vehicle_description, 
+				'manufacturer' => $row->manufacturer, 
+				'year_of_manufacture' => $row->year_of_manufacture, 
+				'mileage' => $row->mileage, 
+				'registration' => $row->registration, 
+				'vehicle_condition' => $row->vehicle_condition, 
+				'serial_number' => $row->serial_number, 
+				'color' => $row->color, 
+				'created_at' => $row->created_at, 
+				'updated_at' => $row->updated_at, 
+				'is_deleted' => $row->is_deleted
+			);
+
+			$i++;
+		}
+
+		return $result;
+	}
+
+
 	//This function adds a record to the table
 	public function addRecord($subcategory_id, $vehicle_model, $unit_price, $available_quantity, $image="", $vehicle_description="")
 	{
