@@ -9,27 +9,30 @@
     <title>Ecommerce</title>
     <link rel="stylesheet" href="../../css/register.css?v=<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/cf05e83bf0.js" crossorigin="anonymous"></script>
+    <script defer src="../js/validation.js"></script>
 </head>
 <body>
     <div class="container">
     <h2 style="text-align: center"><a href="/">Lingscars</a></h2>
         <div class="form">
             <h1>Log In To Your Account</h1>
-            <form action="/Auth/processLogin" method="post">
+            <form action="/Auth/processLogin" method="post" name="login" id="login">
                 <?= csrf_field() ?> 
                 <div class="input-div">
                     <label class="label" for="email">Enter Your Email</label>
                     <input class="input" type="email" name="email" id="email" placeholder="Enter Your E-mail Here">
                     <i id="user-icon" class="fas fa-user"></i>
+                    <div class="error"></div>
                 </div>
                 <div class="input-div">
                     <label  class="label" for="password">Enter Your Password</label>
                     <input class="input" type="password" name="password" id="password" placeholder="Enter Your Password Here">                    
                     <i id="password-icon" class="fas fa-lock"></i>
+                    <div class="error"></div>
                 </div>
                 <button class="cta" type="submit" name="login">Log In</button>
             </form>
-            <a href="#">Forgot password</a>
+            <a href="#">Forgot password?</a>
             <p>Don't have an account?<a href="/auth/register">Sign Up Here</a></p>
         </div>
     </div>
