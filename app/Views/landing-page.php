@@ -28,7 +28,7 @@
                 <img src="../images/main-image.png" alt="">
             </div>
         </div>
-        <a href="/catalogue"><input type="button" value="Shop now" class="btn btn-dark"></a>
+        <a href="/catalogue"><input type="button" value="Shop now" class="btn btn-dark primary-cta"></a>
     </section>
     
     <!-- this section contains the offers of the day -->
@@ -57,7 +57,11 @@
                                 <h5>Old price: <b style="text-decoration: line-through;">€<?php echo $fake_original_price; ?></b></h5>
                                 <h5>New price: <b>€<?php echo $offer['unit_price']; ?></b></h5>
                             </div>
-                            <a href="/vehicle/<?php echo $offer['vehicle_id']; ?>" class="btn-top-product">Add to Cart</a>
+                            <?php if(isset($_SESSION["user_details"])){  ?>
+                                <a href="/vehicle/<?php echo $offer['vehicle_id']; ?>" class="btn-top-product">Add to Cart</a>
+                            <?php } else{ ?>
+                                <a href="/auth/register" class="btn-top-product">Add to Cart</a>
+                            <?php } ?>
                         </div>
                     <?php } ?>
                 </div>
@@ -98,7 +102,11 @@
                         <h5>Price: <b>€<?php echo $top_product['unit_price']; ?></b></h5>
                         <p><?php echo $top_product['vehicle_description'] ?></p>
                     </div>
-                    <a href="/vehicle/<?php echo $top_product['vehicle_id']; ?>" class="btn-top-product">Add to Cart</a>
+                    <?php if(isset($_SESSION["user_details"])){  ?>
+                        <a href="/vehicle/<?php echo $top_product['vehicle_id']; ?>" class="btn-top-product">Add to Cart</a>
+                    <?php } else{ ?>
+                        <a href="/auth/register" class="btn-top-product">Add to Cart</a>
+                    <?php } ?>
                 </div>
             <?php } ?>
         </div>

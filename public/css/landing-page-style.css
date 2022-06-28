@@ -35,15 +35,17 @@ body
     float: right;
     margin-right: 150px;
     margin-top: -300px;
-    position: relative;
+    position: relative;    
+}
+.btn.btn-dark.primary-cta
+{
     padding: 5px 30px;
-    font-size: 2em;
     color: white;
     background:black;
+    font-size: 2em;
 }
-.btn.btn-dark:hover
+.btn.btn-dark.primary-cta:hover
 {
-    
     color: black;
     background:rgba(255, 255, 255, 0.42);
 }

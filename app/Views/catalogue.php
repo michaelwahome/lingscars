@@ -74,7 +74,7 @@
                                     <b>Price: €<?php echo $row['unit_price']; ?></b>
                                     <input type="text" style="display: none;" name="vehicle_id" value="<?php echo $row['vehicle_id']; ?>">
                                     <?php if(isset($_SESSION["user_details"])){ ?>
-                                        <input style="margin-right: 210px;" type="submit" value="Add to Cart" class="btn btn-dark">
+                                        <input style="margin-right: 218px;" type="submit" value="Add to Cart" class="btn btn-dark">
                                     <?php } else { ?>
                                         <a href="/auth/register" style="margin-right: 400px; width: 10vw; text-align: center;"><input type="button" value="Add to Cart" class="btn btn-dark"></a>
                                     <?php } ?>                                
