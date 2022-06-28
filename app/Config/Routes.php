@@ -3,6 +3,8 @@
 namespace Config;
 
 // Create a new instance of our RouteCollection class.
+use App\Controllers\Subcategories;
+
 $routes = Services::routes();
 
 // Load the system's routing file first, so that the app and ENVIRONMENT
@@ -68,19 +70,25 @@ $routes->get('purchase/(:any)', 'Sale::purchase/$1');
  * -----------------------------------
  * */
 $routes->group('admin', function($routes){
-// routes for vehicles CRUD
-$routes->get('vehicles/read', 'Vehicle::index');
-$routes->get('vehicles/create', 'Vehicle::create');
-$routes->post('vehicles/store', 'Vehicle::store');
-$routes->get('vehicles/edit/(:num)','Vehicle::edit/$1');
-$routes->put('vehicles/update/(:num)', 'Vehicle::update/$1' );
-// routes for categories CRUD
-$routes->get('categories/read', 'Categories::index');
-$routes->get('categories/create', 'Categories::create');
-$routes->post('categories/store', 'Categories::store');
-$routes->get('categories/edit/(:num)','Categories::edit/$1');
-$routes->put('categories/update/(:num)', 'Categories::update/$1' );
-$routes->put('categories/delete/(:num)', 'Categories::delete/$1' );
+  // routes for vehicles CRUD
+  $routes->get('vehicles/read', 'Vehicle::index');
+  $routes->get('vehicles/create', 'Vehicle::create');
+  $routes->post('vehicles/store', 'Vehicle::store');
+  $routes->get('vehicles/edit/(:num)','Vehicle::edit/$1');
+  $routes->put('vehicles/update/(:num)', 'Vehicle::update/$1' );
+  // routes for categories CRUD
+  $routes->get('categories/read', 'Categories::index');
+  $routes->get('categories/create', 'Categories::create');
+  $routes->post('categories/store', 'Categories::store');
+  $routes->get('categories/edit/(:num)','Categories::edit/$1');
+  $routes->put('categories/update/(:num)', 'Categories::update/$1' );
+  $routes->put('categories/delete/(:num)', 'Categories::delete/$1' );
+  // routes for subcategories CRUD
+  $routes->get('subcategories/read', 'Subcategories::index');
+  $routes->get('subcategories/create', 'Subcategories::create');
+  $routes->post('subcategories/store', 'Subcategories::store');
+  $routes->get('subcategories/edit/(:num)','Subcategories::edit/$1');
+  $routes->put('subcategories/update/(:num)', 'Subcategories::update/$1');
 });
 
 
