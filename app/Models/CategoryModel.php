@@ -44,9 +44,9 @@ class CategoryModel extends Model
 	}
 
 	//This funtion selects four records from the table
-	public function selectFour()
+	public function selectThree()
 	{
-		$query = $this->db->query("SELECT * FROM categories LIMIT 4");
+		$query = $this->db->query("SELECT * FROM categories LIMIT 3");
 
 		foreach ($query->getResult() as $row)
 		{

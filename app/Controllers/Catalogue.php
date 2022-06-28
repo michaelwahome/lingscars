@@ -15,7 +15,7 @@ class Catalogue extends BaseController
         $vehicleModel = new VehicleModel();
 
         $session = session();
-        $_SESSION["categories"] = $categoryModel->selectFour();
+        $_SESSION["categories"] = $categoryModel->selectThree();
         $_SESSION["subcategories"] = $subcategoryModel->selectAll();
         
         $data['vehicles']=$vehicleModel->selectAll();
@@ -29,7 +29,7 @@ class Catalogue extends BaseController
         $vehicleModel = new VehicleModel();
 
         $session = session();
-        $_SESSION["categories"] = $categoryModel->selectFour();
+        $_SESSION["categories"] = $categoryModel->selectThree();
         $_SESSION["subcategories"] = $subcategoryModel->selectAll();
 
         $data["categories"] = $categoryModel->selectOne($category_id);
@@ -44,11 +44,24 @@ class Catalogue extends BaseController
         $vehicleModel = new VehicleModel();
 
         $session = session();
-        $_SESSION["categories"] = $categoryModel->selectFour();
+        $_SESSION["categories"] = $categoryModel->selectThree();
         $_SESSION["subcategories"] = $subcategoryModel->selectAll();
 
         $data["categories"] = $subcategoryModel->selectOne($subcategory_id);
         $data['vehicles']=$vehicleModel->selectUsingSubcategoryId($subcategory_id);
         return view('catalogue', $data);
+    }
+
+    public function categorylist()
+    {
+        $categoryModel = new CategoryModel();
+        $subcategoryModel = new SubcategoryModel();
+
+        $session = session();
+        $_SESSION["categories"] = $categoryModel->selectThree();
+        $_SESSION["subcategories"] = $subcategoryModel->selectAll();
+
+        $data["categories"] = $categoryModel->selectAll();
+        return view('categorylist', $data);
     }
 }

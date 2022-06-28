@@ -15,7 +15,7 @@ class Home extends BaseController
         $vehicleModel = new VehicleModel();
 
         $session = session();
-        $_SESSION["categories"] = $categoryModel->selectFour();
+        $_SESSION["categories"] = $categoryModel->selectThree();
         $_SESSION["subcategories"] = $subcategoryModel->selectAll();
 
         $data["top_products"] = $vehicleModel->selectThree();

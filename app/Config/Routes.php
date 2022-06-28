@@ -39,13 +39,14 @@ $routes->group('auth', function($routes){
     $routes->get('register_two', 'Auth::register_two');
     $routes->get('logout', 'Auth::logout');
 });
+
 $routes->group('catalogue', function($routes){
     $routes->get('/', 'Catalogue::index');
     $routes->get('categorycatalogue/(:any)', 'Catalogue::categorycatalogue/$1');
     $routes->get('subcategorycatalogue/(:any)', 'Catalogue::subcategorycatalogue/$1');
 });
 
-$routes->get('/maintemplate', 'Home::maintemplate');
+$routes->get('categorylist', 'Catalogue::categorylist');
 
 $routes->post('vehicle', 'Cart::vehicle');
 $routes->get('vehicle/(:any)', 'Cart::vehicleTopProduct/$1');

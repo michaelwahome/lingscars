@@ -46,6 +46,10 @@
                                 <a class="nav-link" href="/catalogue">Catalogue</a>
                             </li>
                             
+                            <li class="nav-item">
+                                <a class="nav-link" href="/categorylist">Categories</a>
+                            </li>
+                            
                             <?php foreach($_SESSION["categories"] as $category) { ?>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/catalogue/categorycatalogue/<?php echo $category["category_id"] ?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
