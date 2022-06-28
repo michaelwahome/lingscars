@@ -36,6 +36,15 @@ body
     margin-right: 150px;
     margin-top: -300px;
     position: relative;
+    padding: 5px 30px;
+    font-size: 2em;
+    color: black;
+    background:rgba(255, 255, 255, 0.42);
+}
+.btn.btn-dark:hover
+{
+    color: white;
+    background:black;
 }
 .offers-of-the-day .row
 {
