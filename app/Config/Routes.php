@@ -32,7 +32,6 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
 $routes->group('auth', function($routes){
     $routes->get('/', 'Auth::index');
     $routes->get('login', 'Auth::login');
@@ -40,17 +39,15 @@ $routes->group('auth', function($routes){
     $routes->get('register_two', 'Auth::register_two');
     $routes->get('logout', 'Auth::logout');
 });
+$routes->get('catalogue', 'Catalogue::overall');
+$routes->get('/cart', 'cart::index');
 
-
-$routes->group('catalogue', function($routes){
-    $routes->get('/', 'Catalogue::index');
-    $routes->get('categorycatalogue/(:any)', 'Catalogue::categorycatalogue/$1');
-    $routes->get('subcategorycatalogue/(:any)', 'Catalogue::subcategorycatalogue/$1');
-});
+$routes->get('/suv_catalogue', 'Catalogue::suv');
+$routes->get('/bike_catalogue', 'Catalogue::bike');
+$routes->get('/sedan_catalogue', 'Catalogue::sedan');
+$routes->get('/overall_catalogue', 'Catalogue::overall');
 
 $routes->get('/maintemplate', 'Home::maintemplate');
-
-$routes->get('/cart', 'Cart::index');
 
 $routes->post('vehicle', 'Cart::vehicle');
 
@@ -71,12 +68,22 @@ $routes->get('purchase/(:any)', 'Sale::purchase/$1');
  * Image CRUD for Admin
  * -----------------------------------
  * */
+$routes->group('admin', function($routes){
+// routes for vehicles CRUD
+$routes->get('vehicles/read', 'Vehicle::index');
+$routes->get('vehicles/create', 'Vehicle::create');
+$routes->post('vehicles/store', 'Vehicle::store');
+$routes->get('vehicles/edit/(:num)','Vehicle::edit/$1');
+$routes->put('vehicles/update/(:num)', 'Vehicle::update/$1' );
+// routes for categories CRUD
+$routes->get('categories/read', 'Categories::index');
+$routes->get('categories/create', 'Categories::create');
+$routes->post('categories/store', 'Categories::store');
+$routes->get('categories/edit/(:num)','Categories::edit/$1');
+$routes->put('categories/update/(:num)', 'Categories::update/$1' );
+$routes->put('categories/delete/(:num)', 'Categories::delete/$1' );
+});
 
-$routes->get('admin/vehicles', 'Vehicle::index');
-$routes->get('admin/vehicles/create', 'Vehicle::create');
-$routes->post('admin/vehicles/store', 'Vehicle::store');
-$routes->get('admin/vehicles/edit/(:num)','Vehicle::edit/$1');
-$routes->put('admin/vehicles/update/(:num)', 'Vehicle::update/$1' );
 
 /*
  * --------------------------------------------------------------------
