@@ -9,14 +9,13 @@
     <title>Ecommerce</title>
     <link rel="stylesheet" href="../../css/register.css?v=<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/cf05e83bf0.js" crossorigin="anonymous"></script>
-    <script defer src="../js/validation.js"></script>
 </head>
 <body>
     <div class="container">
        <h2 style="text-align: center"><a href="/">Lingscars</a></h2> 
         <div class="form">
             <h1>Sign Up For Lings Cars</h1>
-            <form action="/Auth/processRegistration" method="post" name="register" id="register">
+            <form action="/auth/processRegistration" method="post" name="register" id="register">
             <?= csrf_field() ?>
                 <div class="input-div">
                     <label class="label" for="fname">What's Your First Name?</label>
@@ -61,4 +60,25 @@
     </div>
 </body>
 </html>
+
+<!-- JS code to validate password confirmation fields -->
+<script>
+    var password = document.getElementById("newpassword");
+    var confirm_password = document.getElementById("confpassword");
+
+    function validatePassword()
+    {
+        if(password.value != confirm_password.value) 
+        {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        }
+        else
+        {
+            confirm_password.setCustomValidity('');
+        }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+</script>
 

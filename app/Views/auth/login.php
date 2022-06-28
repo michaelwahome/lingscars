@@ -9,14 +9,14 @@
     <title>Ecommerce</title>
     <link rel="stylesheet" href="../../css/register.css?v=<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/cf05e83bf0.js" crossorigin="anonymous"></script>
-    <script defer src="../js/validation.js"></script>
+    <script src="../js/validation.js"></script>
 </head>
 <body>
     <div class="container">
     <h2 style="text-align: center"><a href="/">Lingscars</a></h2>
         <div class="form">
             <h1>Log In To Your Account</h1>
-            <form action="/Auth/processLogin" method="post" name="login" id="login">
+            <form action="/auth/processLogin" method="post" name="login" id="login">
                 <?= csrf_field() ?> 
                 <div class="input-div">
                     <label class="label" for="email">Enter Your Email</label>

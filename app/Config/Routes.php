@@ -40,6 +40,8 @@
     $routes->get('register', 'Auth::register');
     $routes->get('register_two', 'Auth::register_two');
     $routes->get('logout', 'Auth::logout');
+    $routes->post('processLogin', 'Auth::processLogin');
+    $routes->post('processRegistration', 'Auth::processRegistration');
   });
 
   $routes->group('catalogue', function ($routes) {
