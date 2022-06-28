@@ -43,6 +43,26 @@ class CategoryModel extends Model
 		return $result;
 	}
 
+	//This funtion selects four records from the table
+	public function selectFour()
+	{
+		$query = $this->db->query("SELECT * FROM categories LIMIT 4");
+
+		foreach ($query->getResult() as $row)
+		{
+			$result[$row->category_id] = array(
+				'category_id' => $row->category_id, 
+				'category_name'=> $row->category_name, 
+				'category_description' => $row->category_description, 
+				'created_at' => $row->created_at, 
+				'updated_at' => $row->updated_at, 
+				'is_deleted' => $row->is_deleted
+			);
+		}
+
+		return $result;
+	}
+
 	//This function selects one record from the table based on the primary key
 	public function selectOne($category_id)
 	{		

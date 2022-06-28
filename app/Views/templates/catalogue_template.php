@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
-    <link href="../css/catalogue.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
-    <link href="../css/main_template.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="../../css/catalogue.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="../../css/main_template.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
     <title>Lings Cars</title>
 </head>
@@ -43,46 +43,30 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/overall_catalogue">Catalogue</a>
+                                <a class="nav-link" href="/catalogue">Catalogue</a>
                             </li>
                             
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/sedan_catalogue" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Sedan
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/sedan_catalogue">Toyota</a></li>
-                                    <li><a class="dropdown-item" href="/sedan_catalogue">Honda</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/sedan_catalogue">View All</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/suv_catalogue" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    SUV
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/suv_catalogue">Toyota</a></li>
-                                    <li><a class="dropdown-item" href="/suv_catalogue">Range Rover</a></li>
-                                    <li><a class="dropdown-item" href="/suv_catalogue">Volkswagen</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/suv_catalogue">View All</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/bike_catalogue" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Bike
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/bike_catalogue">Yamaha</a></li>
-                                    <li><a class="dropdown-item" href="/bike_catalogue">Kawasaki</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/bike_catalogue">View All</a></li>
-                                </ul>
-                            </li>
-
+                            <?php foreach($_SESSION["categories"] as $category) { ?>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/catalogue/categorycatalogue/<?php echo $category["category_id"] ?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <?php echo $category["category_name"]; ?>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <?php $i = 0; ?>
+                                        <?php foreach($_SESSION["subcategories"] as $subcategory) { ?>
+                                            <?php if($i >= 5) {break;} ?>
+                                            <?php if($subcategory["category_id"] == $category["category_id"]) { ?>
+                                                <li><a class="dropdown-item" href="/catalogue/subcategorycatalogue/<?php echo $subcategory["subcategory_id"] ?>"><?php echo $subcategory["subcategory_name"]; ?></a></li>
+                                                <?php $i++; ?>
+                                                <li><hr class="dropdown-divider"></li>
+                                            <?php } ?>
+                                        <?php } ?>
+                                        <li>
+                                            <a class="dropdown-item" href="/catalogue/categorycatalogue/<?php echo $category["category_id"] ?>">View all</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <?php } ?>
                             
                         </ul>
 

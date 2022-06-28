@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+
 $routes->group('auth', function($routes){
     $routes->get('/', 'Auth::index');
     $routes->get('login', 'Auth::login');
@@ -39,15 +40,17 @@ $routes->group('auth', function($routes){
     $routes->get('register_two', 'Auth::register_two');
     $routes->get('logout', 'Auth::logout');
 });
-$routes->get('catalogue', 'Catalogue::overall');
-$routes->get('/cart', 'cart::index');
 
-$routes->get('/suv_catalogue', 'Catalogue::suv');
-$routes->get('/bike_catalogue', 'Catalogue::bike');
-$routes->get('/sedan_catalogue', 'Catalogue::sedan');
-$routes->get('/overall_catalogue', 'Catalogue::overall');
+
+$routes->group('catalogue', function($routes){
+    $routes->get('/', 'Catalogue::index');
+    $routes->get('categorycatalogue/(:any)', 'Catalogue::categorycatalogue/$1');
+    $routes->get('subcategorycatalogue/(:any)', 'Catalogue::subcategorycatalogue/$1');
+});
 
 $routes->get('/maintemplate', 'Home::maintemplate');
+
+$routes->get('/cart', 'Cart::index');
 
 $routes->post('vehicle', 'Cart::vehicle');
 

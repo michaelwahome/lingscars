@@ -37,10 +37,12 @@ class VehicleModel extends model
 	public function selectAll()
 	{
 		$query = $this->db->query("SELECT * FROM vehicles");
+		$i = 0;
+		$result[$i] = 0;
 
 		foreach ($query->getResult() as $row)
 		{
-			$result[$row->vehicle_id] = array(
+			$result[$i] = array(
 				'vehicle_id' => $row->vehicle_id, 
 				'subcategory_id' => $row->subcategory_id, 
 				'vehicle_model'=> $row->vehicle_model, 
@@ -59,6 +61,44 @@ class VehicleModel extends model
 				'updated_at' => $row->updated_at, 
 				'is_deleted' => $row->is_deleted
 			);
+
+			$i++;
+		}
+
+		return $result;
+	}
+
+	//This funtion selects records from the table based on a foreign key
+	public function selectUsingCategoryId($category_id)
+	{
+		$query = $this->db->query("SELECT * FROM vehicles WHERE category_id='$category_id'");
+
+		$i = 0;
+		$result[$i] = 0;
+
+		foreach ($query->getResult() as $row)
+		{
+			$result[$i] = array(
+				'vehicle_id' => $row->vehicle_id, 
+				'subcategory_id' => $row->subcategory_id, 
+				'vehicle_model'=> $row->vehicle_model, 
+				'unit_price'=> $row->unit_price, 
+				'available_quantity' => $row->available_quantity, 
+				'image' => $row->image, 
+				'vehicle_description' => $row->vehicle_description, 
+				'manufacturer' => $row->manufacturer, 
+				'year_of_manufacture' => $row->year_of_manufacture, 
+				'mileage' => $row->mileage, 
+				'registration' => $row->registration, 
+				'vehicle_condition' => $row->vehicle_condition, 
+				'serial_number' => $row->serial_number, 
+				'color' => $row->color, 
+				'created_at' => $row->created_at, 
+				'updated_at' => $row->updated_at, 
+				'is_deleted' => $row->is_deleted
+			);
+
+			$i++;
 		}
 
 		return $result;
@@ -70,6 +110,7 @@ class VehicleModel extends model
 		$query = $this->db->query("SELECT * FROM vehicles WHERE subcategory_id='$subcategory_id'");
 
 		$i = 0;
+		$result[$i] = 0;
 
 		foreach ($query->getResult() as $row)
 		{

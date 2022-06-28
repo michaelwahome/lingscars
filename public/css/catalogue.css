@@ -127,3 +127,7 @@ td input
     color: #898989;
     text-decoration-line: line-through;
 }
+.frame-one p
+{
+    font-size: 1.15em;
+}
