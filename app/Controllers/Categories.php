@@ -25,7 +25,7 @@ class Categories extends BaseController
         'category_description'       => $this->request->getPost('category_description')
       ];
       $category->save($data);
-      return redirect()->to('admin/categories/read')->with('status', 'category saved');
+      return redirect()->to('admin/categories/read')->with('status', 'Category saved');
 
     }
 

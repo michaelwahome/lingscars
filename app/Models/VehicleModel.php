@@ -11,6 +11,7 @@ class VehicleModel extends model
 
 	protected $allowedFields =
 		[
+		'category_id',
 		'subcategory_id',
 		'vehicle_model'	,
 		'unit_price',	
@@ -44,6 +45,7 @@ class VehicleModel extends model
 		{
 			$result[$i] = array(
 				'vehicle_id' => $row->vehicle_id, 
+				'category_id' => $row->category_id, 
 				'subcategory_id' => $row->subcategory_id, 
 				'vehicle_model'=> $row->vehicle_model, 
 				'unit_price'=> $row->unit_price, 

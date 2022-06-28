@@ -1,5 +1,5 @@
 <?php
-  $this->extend('/templates/main_template');
+  $this->extend('/templates/admin_template');
   $this->section('content');
 ?>
 <div class="container mt-4">
@@ -23,7 +23,7 @@
             <thead>
               <tr>
                 <th>Id</th>
-
+                <th>Category</th>
                 <th>Sub-category</th>
                 <th>Vehicle model</th>
                 <th>Unit_price</th>
@@ -45,7 +45,7 @@
             ?>
             <tr>
               <td><?php echo $row['vehicle_id']; ?></td>
-
+              <td><?php echo $row['category_id']; ?></td>
               <td><?php echo $row['subcategory_id']; ?></td>
               <td><?php echo $row['vehicle_model']; ?></td>
               <td><?php echo $row['unit_price']; ?></td>
@@ -58,8 +58,8 @@
               <td><?php echo $row['registration']; ?></td>
               <td><?php echo $row['color']; ?></td>
               <td>
-                <a href="../vehicle/edit/ <?php echo $row['vehicle_id'] ?>" class="btn btn-primary btn-sm">Edit</a>
-                <a href="../vehicle/delete/ <?= $row['vehicle_id'] ?>" class="btn btn-danger btn-sm">Delete</a>
+                <a href="/admin/vehicles/edit/<?php echo $row['vehicle_id'] ?>" class="btn btn-primary btn-sm">Edit</a>
+                <a href="/admin/vehicles/delete/<?php echo $row['vehicle_id'] ?>" class="btn btn-danger btn-sm">Delete</a>
               </td>
             </tr>
             <?php

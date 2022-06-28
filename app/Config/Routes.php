@@ -77,13 +77,14 @@ $routes->get('vehicles/create', 'Vehicle::create');
 $routes->post('vehicles/store', 'Vehicle::store');
 $routes->get('vehicles/edit/(:num)','Vehicle::edit/$1');
 $routes->put('vehicles/update/(:num)', 'Vehicle::update/$1' );
+$routes->get('vehicles/delete/(:num)', 'Vehicle::delete/$1' );
 // routes for categories CRUD
 $routes->get('categories/read', 'Categories::index');
 $routes->get('categories/create', 'Categories::create');
 $routes->post('categories/store', 'Categories::store');
 $routes->get('categories/edit/(:num)','Categories::edit/$1');
 $routes->put('categories/update/(:num)', 'Categories::update/$1' );
-$routes->put('categories/delete/(:num)', 'Categories::delete/$1' );
+$routes->get('categories/delete/(:num)', 'Categories::delete/$1' );
 });
 
 

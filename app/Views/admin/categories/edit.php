@@ -1,5 +1,5 @@
 <?php
-  $this->extend('/templates/main_template');
+  $this->extend('/templates/admin_template');
   $this->section('content');
 ?>
 <div class="container mt-4">
