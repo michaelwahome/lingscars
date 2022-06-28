@@ -45,6 +45,19 @@ class CategoryModel extends Model
 		return $result;
 	}
 
+	//This function counts all records
+	public function countAll()
+	{
+		$query = $this->db->query("SELECT COUNT(*) AS count FROM categories");
+
+		foreach ($query->getResult() as $row)
+		{
+			$result = $row->count;
+		}
+
+		return $result;
+	}
+
 	//This funtion selects four records from the table
 	public function selectThree()
 	{

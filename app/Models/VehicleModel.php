@@ -142,6 +142,19 @@ class VehicleModel extends model
 		return $result;
 	}
 
+	//This function counts all records
+	public function countAll()
+	{
+		$query = $this->db->query("SELECT COUNT(*) AS count FROM vehicles");
+
+		foreach ($query->getResult() as $row)
+		{
+			$result = $row->count;
+		}
+
+		return $result;
+	}
+
 	//This function selects one record from the table based on the primary key
 	public function selectOne($vehicle_id)
 	{

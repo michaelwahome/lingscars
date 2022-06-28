@@ -19,7 +19,7 @@
               <div class="col-md-12">
                 <div class="form-group mb-2">
                   <label for="name">Category</label>
-                  <input type="text" class="form-control" name="category_id" required placeholder="Enter subcategory">
+                  <input type="text" class="form-control" name="category_id" required placeholder="Enter category">
                 </div>
                 <div class="form-group mb-2">
                   <label for="name">Sub Category Name</label>

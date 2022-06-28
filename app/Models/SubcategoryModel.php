@@ -44,6 +44,19 @@
       return $result;
     }
 
+    //This function counts all records
+    public function countAll()
+    {
+      $query = $this->db->query("SELECT COUNT(*) AS count FROM subcategories");
+
+      foreach ($query->getResult() as $row)
+      {
+        $result = $row->count;
+      }
+
+      return $result;
+    }
+
     //This funtion selects records from the table based on a foreign key
     public function selectUsingCategoryId ($category_id)
     {

@@ -19,7 +19,7 @@
           </h5>
         </div>
         <div class="card-body">
-          <table class="table table-hover">
+          <table class="table table-hover table-bordered">
             <thead>
             <tr>
               <th scope="col">ID</th>
@@ -34,8 +34,10 @@
                 <td><?php echo $row['subcategory_id']; ?></td>
                 <td><?php echo $row['category_id']; ?></td>
                 <td><?php echo $row['subcategory_name']; ?></td>
-                <td><a href="/subcategories/edit/<?php echo $row['subcategory_id'] ?>" class="btn btn-primary btn-sm">Update</a></td>
-                <td><a href="/subcategories/delete/<?= $row['subcategory_id'] ?>" class="btn btn-danger btn-sm">Delete</a></td>
+                <td style="display: flex; flex-direction: column; justify-content: space-evenly;">
+                  <a href="/subcategories/edit/<?php echo $row['subcategory_id'] ?>" class="btn btn-primary btn-sm">Update</a>
+                  <a href="/subcategories/delete/<?= $row['subcategory_id'] ?>" class="btn btn-danger btn-sm">Delete</a>
+                </td>
               </tr>
               </tbody>
 

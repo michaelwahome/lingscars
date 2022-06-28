@@ -19,7 +19,7 @@
           </h5>
         </div>
         <div class="card-body">
-          <table class="table table-bordered" id="vehicles-list">
+          <table class="table table-hover table-bordered" id="vehicles-list">
             <thead>
               <tr>
                 <th>Id</th>
@@ -29,12 +29,6 @@
                 <th>Unit_price</th>
                 <th>Quantity available</th>
                 <th>Image</th>
-                <th>Vehicle Description</th>
-                <th>Manufacturer</th>
-                <th>Year of manufacture</th>
-                <th>Mileage</th>
-                <th>Registration</th>
-                <th>Color</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -51,13 +45,7 @@
               <td><?php echo $row['unit_price']; ?></td>
               <td><?php echo $row['available_quantity']; ?></td>
               <td><img src="<?php echo base_url('public/uploads/'.$row['image']) ; ?>" style="height: 90px; width: 90px;" alt="<?php echo $row['vehicle_model']; ?>"></td>
-              <td><?php echo $row['vehicle_description']; ?></td>
-              <td><?php echo $row['manufacturer']; ?></td>
-              <td><?php echo $row['year_of_manufacture']; ?></td>
-              <td><?php echo $row['mileage']; ?></td>
-              <td><?php echo $row['registration']; ?></td>
-              <td><?php echo $row['color']; ?></td>
-              <td>
+              <td style="display: flex; flex-direction: column; justify-content: space-evenly;">
                 <a href="/admin/vehicles/edit/<?php echo $row['vehicle_id'] ?>" class="btn btn-primary btn-sm">Edit</a>
                 <a href="/admin/vehicles/delete/<?php echo $row['vehicle_id'] ?>" class="btn btn-danger btn-sm">Delete</a>
               </td>

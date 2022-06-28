@@ -25,6 +25,12 @@ class Dashboard extends BaseController
         $subcategoryModel = new SubcategoryModel();
         $vehicleModel = new VehicleModel();
 
-        return view('admin/dashboard');
+        $data["count"]["users"] = $authModel->countUsers();
+        $data["count"]["accounts"] = $authModel->countAll();
+        $data["count"]["categories"] = $categoryModel->countAll();
+        $data["count"]["subcategories"] = $subcategoryModel->countAll();
+        $data["count"]["vehicles"] = $vehicleModel->countAll();
+
+        return view('admin/dashboard', $data);
     }
 }

@@ -56,4 +56,30 @@ class AuthModel extends Model
 		//Model Test
 		//return "Data Transfered to Model Successfully: Username - ".$username.", Password - ".$password; 
 	}
+
+	//This function counts all records
+	public function countAll()
+	{
+		$query = $this->db->query("SELECT COUNT(*) AS count FROM users");
+
+		foreach ($query->getResult() as $row)
+		{
+			$result = $row->count;
+		}
+
+		return $result;
+	}
+
+	//This function counts all users
+	public function countUsers()
+	{
+		$query = $this->db->query("SELECT COUNT(*) AS count FROM users WHERE role_id = 1");
+
+		foreach ($query->getResult() as $row)
+		{
+			$result = $row->count;
+		}
+
+		return $result;
+	}
 }

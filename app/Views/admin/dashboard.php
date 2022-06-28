@@ -32,63 +32,69 @@
             </div>
             <div class="text-end pt-1">
               <p class="text-sm mb-0 text-capitalize">Users</p>
-              <h4 class="mb-0">$53k</h4>
+              <h4 class="mb-0"><?php echo $count["users"]; ?></h4>
             </div>
           </div>
           <hr class="dark horizontal my-0">
           <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than lask week</p>
+            <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><?php echo $count["accounts"]; ?></span> accounts in total</p>
           </div>
         </div>
       </div>
       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
           <div class="card-header p-3 pt-2">
-            <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-              <i class="material-icons opacity-10">table_view</i>
-            </div>
+            <a href="/admin/categories/read">
+              <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">table_view</i>
+              </div>
+            </a>
             <div class="text-end pt-1">
               <p class="text-sm mb-0 text-capitalize">Categories</p>
-              <h4 class="mb-0">2,300</h4>
+              <h4 class="mb-0"><?php echo $count["categories"]; ?></h4>
             </div>
           </div>
           <hr class="dark horizontal my-0">
           <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than lask month</p>
+            <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></p>
           </div>
         </div>
       </div>
       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
           <div class="card-header p-3 pt-2">
-            <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-              <i class="material-icons opacity-10">category</i>
-            </div>
+            <a href="/admin/subcategories/read">
+              <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">category</i>
+              </div>
+            </a>
             <div class="text-end pt-1">
               <p class="text-sm mb-0 text-capitalize">Subcategories</p>
-              <h4 class="mb-0">3,462</h4>
+              <h4 class="mb-0"><?php echo $count["subcategories"]; ?></h4>
             </div>
           </div>
           <hr class="dark horizontal my-0">
           <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> than yesterday</p>
+            <p class="mb-0"><span class="text-danger text-sm font-weight-bolder"></p>
           </div>
         </div>
       </div>
       <div class="col-xl-3 col-sm-6">
         <div class="card">
           <div class="card-header p-3 pt-2">
-            <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-              <i class="material-icons opacity-10">directions_car</i>
-            </div>
+            <a href="/admin/vehicles/read">
+              <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">directions_car</i>
+              </div>
+            </a>
             <div class="text-end pt-1">
               <p class="text-sm mb-0 text-capitalize">Vehicle Models</p>
-              <h4 class="mb-0">$103,430</h4>
+              <h4 class="mb-0"><?php echo $count["vehicles"]; ?></h4>
             </div>
           </div>
           <hr class="dark horizontal my-0">
           <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+5% </span>than yesterday</p>
+            <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></p>
           </div>
         </div>
       </div>
