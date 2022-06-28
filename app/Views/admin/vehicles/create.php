@@ -9,7 +9,7 @@
         <div class="card-header">
           <h5>
             Add Vehicles
-            <a href="<?= base_url('/admin/vehicles') ?>" class="btn btn-danger btn-sm float-end">Back</a>
+            <a href="<?= base_url('/admin/vehicles/read') ?>" class="btn btn-danger btn-sm float-end">Back</a>
           </h5>
         </div>
         <div class="card-body">

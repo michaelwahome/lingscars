@@ -10,7 +10,7 @@ class Vehicle extends BaseController
     {
       $vehicleModel = new VehicleModel();
       $data['vehicles'] = $vehicleModel->selectAll();
-      return view('admin/vehicles/index', $data); // Change this view
+      return view('admin/vehicles/read', $data); // Change this view
     }
 
     
@@ -40,7 +40,7 @@ class Vehicle extends BaseController
       $data = [
         /* TODO: other fields that are to be uploaded to the database. Not included in the admin side at all as of now.*/
         /*Functionality of the multiple image upload*/
-        'subcategory_id'      => $this->request->getPost('subcategory_id'),
+        'subcategory_name'      => $this->request->getPost('subcategory_id'),
         'vehicle_model'       => $this->request->getPost('vehicle_model'),
         'vehicle_description' => $this->request->getPost('vehicle_description'),
         'unit_price'          => $this->request->getPost('unit_price'),
@@ -126,7 +126,7 @@ class Vehicle extends BaseController
       'image'               => $newName
     ];
     $vehicle->update($id ,$data);
-    return redirect()->to('admin/vehicles')->with('status', 'Vehicle saved');
+    return redirect()->to('admin/vehicles/read')->with('status', 'Vehicle saved');
 
   }
 
@@ -134,7 +134,7 @@ class Vehicle extends BaseController
   {
     $vehicle = new VehicleModel();
     $data['vehicles'] = $vehicle->delete($id);
-    return redirect()->to('admin/vehicles')->with('status', 'Vehicle deleted');
+    return redirect()->to('admin/vehicles/read')->with('status', 'Vehicle deleted');
   }
 
 }
