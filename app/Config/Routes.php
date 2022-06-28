@@ -39,13 +39,11 @@ $routes->group('auth', function($routes){
     $routes->get('register_two', 'Auth::register_two');
     $routes->get('logout', 'Auth::logout');
 });
-$routes->get('catalogue', 'Catalogue::overall');
-$routes->get('/cart', 'cart::index');
-
-$routes->get('/suv_catalogue', 'Catalogue::suv');
-$routes->get('/bike_catalogue', 'Catalogue::bike');
-$routes->get('/sedan_catalogue', 'Catalogue::sedan');
-$routes->get('/overall_catalogue', 'Catalogue::overall');
+$routes->group('catalogue', function($routes){
+    $routes->get('/', 'Catalogue::index');
+    $routes->get('categorycatalogue/(:any)', 'Catalogue::categorycatalogue/$1');
+    $routes->get('subcategorycatalogue/(:any)', 'Catalogue::subcategorycatalogue/$1');
+});
 
 $routes->get('/maintemplate', 'Home::maintemplate');
 
