@@ -25,6 +25,10 @@
                   <label for="name">Description</label>
                   <input type="text" class="form-control" name="category_description" required placeholder="Enter category description">
                 </div>
+                <div class="form-group mb-2">
+                  <label for="name">Image</label>
+                  <input type="file" class="form-control" name="images[]" required placeholder="Enter vehicle image" multiple>
+                </div>
                 <div class="col-md12">
                   <hr>
                   <button type="submit" class="btn btn-primary px-4 float-end">Save</button>

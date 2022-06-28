@@ -24,6 +24,7 @@
                 <tr>
                 <th scope="col">ID</th>
                 <th scope="col">name</th>
+                <th scope="col">Image</th>
                 <th scope="col">isdeleted</th>
                 </tr>
             </thead>
@@ -32,6 +33,7 @@
                 <tr>
                 <td><?php echo $row['category_id']; ?></td>
                 <td><?php echo $row['category_name']; ?></td>
+                <td><img src="<?php echo base_url('public/uploads/'.$row['image']) ; ?>" style="height: 90px; width: 90px;" alt="<?php echo $row['category_name']; ?>"></td>
                 <td><?php echo $row['is_deleted']; ?></td>
                 <td><a href="/admin/categories/edit/<?php echo $row['category_id'] ?>" class="btn btn-primary btn-sm">Update</a></td>
                 <td><a href="/admin/categories/delete/<?= $row['category_id'] ?>" class="btn btn-danger btn-sm">Delete</a></td>

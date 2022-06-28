@@ -20,10 +20,7 @@ class Categories extends BaseController
     {
       $category = new CategoryModel();
 
-      $data = [
-        'category_name'      => $this->request->getPost('category_name'),
-        'category_description'       => $this->request->getPost('category_description')
-      ];
+      $data = $this->getData();
       $category->save($data);
       return redirect()->to('admin/categories/read')->with('status', 'Category saved');
 
@@ -39,11 +36,8 @@ class Categories extends BaseController
     public function update ($id)
     {
     $category = new CategoryModel();
-    $data = [
-        'category_name'        => $this->request->getPost('category_name'),
-        'category_description' => $this->request->getPost('category_description')
-      ];
-    $category->update($id, $data);
+      $data = $this->getData();
+      $category->update($id, $data);
     return redirect()->to('admin/categories/read')->with('status', 'Category saved');
     }
 
@@ -53,5 +47,25 @@ class Categories extends BaseController
       $data['category'] = $category->delete($id);
       return redirect()->to('admin/categories/read')->with('status', 'Category deleted');
     }
-    
+
+  /**
+   * @return array
+   */
+  public function getData (): array
+  {
+    if ( $imagefile = $this->request->getFiles() ) {
+      foreach ( $imagefile[ 'images' ] as $img ) {
+        if ( $img->isValid() && !$img->hasMoved() ) {
+          $newName = $img->getRandomName();
+          $img->move('public/uploads', $newName);
+        }
+      }
+    }
+    return [
+      'category_name'        => $this->request->getPost('category_name'),
+      'category_description' => $this->request->getPost('category_description'),
+      'image'                => $newName
+    ];
+  }
+
 }
