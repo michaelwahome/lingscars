@@ -1,5 +1,5 @@
 <?php
-  $this->extend('/templates/main_template');
+  $this->extend('/templates/admin_template');
   $this->section('content');
 ?>
 <div class="container mt-4">
@@ -25,7 +25,6 @@
               <th scope="col">ID</th>
               <th scope="col">Category ID</th>
               <th scope="col">Name</th>
-              <th scope="col">Description</th>
               <th scope="col">Action</th>
             </tr>
             </thead>
@@ -35,7 +34,6 @@
                 <td><?php echo $row['subcategory_id']; ?></td>
                 <td><?php echo $row['category_id']; ?></td>
                 <td><?php echo $row['subcategory_name']; ?></td>
-                <td><?php echo $row['subcategory_description']; ?></td>
                 <td><a href="/subcategories/edit/<?php echo $row['subcategory_id'] ?>" class="btn btn-primary btn-sm">Update</a></td>
                 <td><a href="/subcategories/delete/<?= $row['subcategory_id'] ?>" class="btn btn-danger btn-sm">Delete</a></td>
               </tr>

@@ -1,5 +1,5 @@
 <?php
-  $this->extend('/templates/main_template');
+  $this->extend('/templates/admin_template');
   $this->section('content');
 ?>
 <div class="container mt-4">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group mb-2">
                   <label for="description">Description</label>
-                  <textarea datasrc="<?= $subcategories['subcategory_description'] ?>" class="form-control" type="text" maxlength="500" required placeholder="Enter vehicle description" name="subcategory_description"></textarea>
+                  <input type="text" value="<?= $subcategories['subcategory_description']; ?>" class="form-control" name="subcategory_description" required placeholder="Enter subcategory description">
                 </div>
                 <div class="col-md12">
                   <hr>
