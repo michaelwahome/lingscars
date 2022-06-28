@@ -8,7 +8,7 @@
       <div class="card">
         <div class="card-header">
           <h5>
-            Add Sub-Categories
+            Edit Sub-Categories
             <a href="<?= base_url('/admin/subcategories/read') ?>" class="btn btn-danger btn-sm float-end">Back</a>
           </h5>
         </div>

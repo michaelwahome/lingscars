@@ -96,6 +96,13 @@
     $routes->get('subcategories/edit/(:num)', 'Subcategories::edit/$1');
     $routes->put('subcategories/update/(:num)', 'Subcategories::update/$1');
     $routes->get('subcategories/delete/(:num)', 'Subcategories::delete/$1');
+    // routes for users CRUD
+    $routes->get('users/read', 'Users::index');
+    $routes->get('users/create', 'Users::create');
+    $routes->post('users/store', 'Users::store');
+    $routes->get('users/edit/(:num)', 'Users::edit/$1');
+    $routes->put('users/update/(:num)', 'Users::update/$1');
+    $routes->get('users/delete/(:num)', 'Users::delete/$1');
 
   });
 
