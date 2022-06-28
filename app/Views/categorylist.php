@@ -27,9 +27,9 @@
         <?php if(isset($categories)) { ?>
             <div class="row justify-content-center">
                 <?php foreach($categories as $category){ ?>
-                    <a class="col-3 m-3" href="catalogue/categorycatalogue/<?php echo $category['category_id']?>">
+                    <a class="col-12 col-md-3 m-3" href="catalogue/categorycatalogue/<?php echo $category['category_id']?>">
                         <div class="card bg-dark text-white">
-                            <img src="../../public/uploads/frame5.png" class="card-img" alt="Category image">
+                            <img src="../../public/uploads/<?php echo $category['image']?>" class="card-img" alt="Category image">
                             <div class="card-img-overlay">
                                 <h5 class="card-title text-center my-5"><?php echo $category["category_name"] ?></h5>
                             </div>

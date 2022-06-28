@@ -14,6 +14,7 @@ class CategoryModel extends Model
 		[
 		'category_name',
 		'category_description',
+		'image',
 		];
 
 	public function __construct()
@@ -34,6 +35,7 @@ class CategoryModel extends Model
 				'category_id' => $row->category_id, 
 				'category_name'=> $row->category_name, 
 				'category_description' => $row->category_description, 
+				'image' => $row->image,
 				'created_at' => $row->created_at, 
 				'updated_at' => $row->updated_at, 
 				'is_deleted' => $row->is_deleted
@@ -54,6 +56,7 @@ class CategoryModel extends Model
 				'category_id' => $row->category_id, 
 				'category_name'=> $row->category_name, 
 				'category_description' => $row->category_description, 
+				'image' => $row->image,
 				'created_at' => $row->created_at, 
 				'updated_at' => $row->updated_at, 
 				'is_deleted' => $row->is_deleted
@@ -74,6 +77,7 @@ class CategoryModel extends Model
 				'category_id' => $row->category_id, 
 				'category_name'=> $row->category_name, 
 				'category_description' => $row->category_description, 
+				'image' => $row->image,
 				'created_at' => $row->created_at, 
 				'updated_at' => $row->updated_at, 
 				'is_deleted' => $row->is_deleted
