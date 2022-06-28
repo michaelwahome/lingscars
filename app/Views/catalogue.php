@@ -46,7 +46,7 @@
                 <?php } ?>
             </div>
             <div class="frame-two">
-                <h1><b>Vehicle Highlights</b></h1>
+                <h1><b>Vehicles</b></h1>
             </div>
 
             <?php if($vehicles[0] == 0){ ?>

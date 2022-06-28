@@ -53,6 +53,7 @@ $routes->get('/maintemplate', 'Home::maintemplate');
 $routes->get('/cart', 'Cart::index');
 
 $routes->post('vehicle', 'Cart::vehicle');
+$routes->get('vehicle/(:any)', 'Cart::vehicleTopProduct/$1');
 
 $routes->post('addtocart', 'Cart::addToCart');
 
