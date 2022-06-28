@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet"> 
     
     <!--Fontawesome Icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/cf05e83bf0.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
     <link href="../../css/catalogue.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
@@ -138,23 +138,18 @@
                             <h4>Useful Links</h4> 
                             <ul> 
                                 <li>
-                                    <i class="bx bx-chevron-right"></i> 
                                     <a href="/">Home</a>
                                 </li> 
                                 <li>
-                                    <i class="bx bx-chevron-right"></i> 
                                     <a href="/catalogue">Catalogue</a>
                                 </li> 
                                 <li>
-                                    <i class="bx bx-chevron-right"></i> 
                                     <a href="/auth/login">Login</a>
                                 </li> 
                                 <li>
-                                    <i class="bx bx-chevron-right"></i> 
                                     <a href="/auth/register">Register</a>
                                 </li> 
                                 <li>
-                                    <i class="bx bx-chevron-right"></i> 
                                     <a href="#">Back to Top</a>
                                 </li> 
                             </ul> 
@@ -175,16 +170,12 @@
                             <p>We are a recently founded website that aims to deliver you the car of your dreams at no extra effort.</p> 
                             <div class="social-links mt-3"> 
                                 <a href="#" class="twitter">
-                                    <i class="bx bxl-twitter"></i>
                                 </a> 
                                 <a href="#" class="facebook">
-                                    <i class="bx bxl-facebook"></i>
                                 </a> 
                                 <a href="#" class="instagram">
-                                    <i class="bx bxl-instagram"></i>
                                 </a> 
                                 <a href="#" class="linkedin">
-                                    <i class="bx bxl-linkedin"></i>
                                 </a> 
                             </div> 
                         </div> 
