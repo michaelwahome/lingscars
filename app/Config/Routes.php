@@ -1,76 +1,76 @@
 <?php
 
-namespace Config;
+  namespace Config;
 
-// Create a new instance of our RouteCollection class.
-use App\Controllers\Subcategories;
+  // Create a new instance of our RouteCollection class.
+  use App\Controllers\Subcategories;
 
-$routes = Services::routes();
+  $routes = Services::routes();
 
 // Load the system's routing file first, so that the app and ENVIRONMENT
 // can override as needed.
-if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
+  if ( file_exists(SYSTEMPATH . 'Config/Routes.php') ) {
     require SYSTEMPATH . 'Config/Routes.php';
-}
+  }
 
-/*
- * --------------------------------------------------------------------
- * Router Setup
- * --------------------------------------------------------------------
- */
-$routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
-$routes->setDefaultMethod('index');
-$routes->setTranslateURIDashes(false);
-$routes->set404Override();
-$routes->setAutoRoute(true);
+  /*
+   * --------------------------------------------------------------------
+   * Router Setup
+   * --------------------------------------------------------------------
+   */
+  $routes->setDefaultNamespace('App\Controllers');
+  $routes->setDefaultController('Home');
+  $routes->setDefaultMethod('index');
+  $routes->setTranslateURIDashes(false);
+  $routes->set404Override();
+  $routes->setAutoRoute(true);
 
-/*
- * --------------------------------------------------------------------
- * Route Definitions
- * --------------------------------------------------------------------
- */
+  /*
+   * --------------------------------------------------------------------
+   * Route Definitions
+   * --------------------------------------------------------------------
+   */
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->group('auth', function($routes){
+  $routes->get('/', 'Home::index');
+  $routes->group('auth', function ($routes) {
     $routes->get('/', 'Auth::index');
     $routes->get('login', 'Auth::login');
     $routes->get('register', 'Auth::register');
     $routes->get('register_two', 'Auth::register_two');
     $routes->get('logout', 'Auth::logout');
-});
+  });
 
-$routes->group('catalogue', function($routes){
+  $routes->group('catalogue', function ($routes) {
     $routes->get('/', 'Catalogue::index');
     $routes->get('categorycatalogue/(:any)', 'Catalogue::categorycatalogue/$1');
     $routes->get('subcategorycatalogue/(:any)', 'Catalogue::subcategorycatalogue/$1');
-});
+  });
 
-$routes->get('categorylist', 'Catalogue::categorylist');
+  $routes->get('categorylist', 'Catalogue::categorylist');
 
-$routes->post('vehicle', 'Cart::vehicle');
-$routes->get('vehicle/(:any)', 'Cart::vehicleTopProduct/$1');
+  $routes->post('vehicle', 'Cart::vehicle');
+  $routes->get('vehicle/(:any)', 'Cart::vehicleTopProduct/$1');
 
-$routes->post('addtocart', 'Cart::addToCart');
+  $routes->post('addtocart', 'Cart::addToCart');
 
-$routes->post('editcart', 'Cart::editCart');
+  $routes->post('editcart', 'Cart::editCart');
 
-$routes->post('editquantity', 'Cart::editQuantity');
+  $routes->post('editquantity', 'Cart::editQuantity');
 
-$routes->get('removeitem', 'Cart::removeItem');
+  $routes->get('removeitem', 'Cart::removeItem');
 
-$routes->get('checkout', 'Sale::checkout');
+  $routes->get('checkout', 'Sale::checkout');
 
-$routes->get('purchase/(:any)', 'Sale::purchase/$1');
+  $routes->get('purchase/(:any)', 'Sale::purchase/$1');
 
-/*
- * ------------------------------------
- * Image CRUD for Admin
- * -----------------------------------
- * */
-$routes->group('admin', function($routes){
+  /*
+   * ------------------------------------
+   * Image CRUD for Admin
+   * -----------------------------------
+   * */
+  $routes->group('admin', function ($routes) {
     //route for admin
     $routes->get('dashboard', 'Dashboard::index');
     // routes for vehicles CRUD
@@ -91,25 +91,26 @@ $routes->group('admin', function($routes){
     $routes->get('subcategories/read', 'Subcategories::index');
     $routes->get('subcategories/create', 'Subcategories::create');
     $routes->post('subcategories/store', 'Subcategories::store');
-    $routes->get('subcategories/edit/(:num)','Subcategories::edit/$1');
+    $routes->get('subcategories/edit/(:num)', 'Subcategories::edit/$1');
     $routes->put('subcategories/update/(:num)', 'Subcategories::update/$1');
     $routes->get('subcategories/delete/(:num)', 'Subcategories::delete/$1');
-});
+
+  });
 
 
-/*
- * --------------------------------------------------------------------
- * Additional Routing
- * --------------------------------------------------------------------
- *
- * There will often be times that you need additional routing and you
- * need it to be able to override any defaults in this file. Environment
- * based routes is one such time. require() additional route files here
- * to make that happen.
- *
- * You will have access to the $routes object within that file without
- * needing to reload it.
- */
-if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
+  /*
+   * --------------------------------------------------------------------
+   * Additional Routing
+   * --------------------------------------------------------------------
+   *
+   * There will often be times that you need additional routing and you
+   * need it to be able to override any defaults in this file. Environment
+   * based routes is one such time. require() additional route files here
+   * to make that happen.
+   *
+   * You will have access to the $routes object within that file without
+   * needing to reload it.
+   */
+  if ( file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php') ) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
-}
+  }
