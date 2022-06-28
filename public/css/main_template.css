@@ -27,25 +27,6 @@
     font-family: "Raleway", sans-serif;
     color: #fff
 }
-#footer .footer-top .social-links a{
-    font-size: 18px;
-    display: inline-block;
-    background: #545454;
-    color: #fff;
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s
-}
-#footer .footer-top .social-links a:hover{
-    background: #e96b56;
-    color: #fff;
-    text-decoration: none
-}
 #footer .footer-top h4{
     font-size: 16px;
     font-weight: bold;

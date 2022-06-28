@@ -50,6 +50,7 @@ $routes->get('/overall_catalogue', 'Catalogue::overall');
 $routes->get('/maintemplate', 'Home::maintemplate');
 
 $routes->post('vehicle', 'Cart::vehicle');
+$routes->get('vehicle/(:any)', 'Cart::vehicleTopProduct/$1');
 
 $routes->post('addtocart', 'Cart::addToCart');
 

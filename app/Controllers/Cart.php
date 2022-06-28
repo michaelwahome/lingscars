@@ -93,6 +93,15 @@ class Cart extends BaseController
       return view('vehicle', $data);
     }
 
+    // Function to load page to select quantity of cars for new cart item from top-product on landing page
+  public function vehicleTopProduct($vehicle_id)
+  {
+    $vehicleModel = new VehicleModel();
+
+    $data["vehicle"] = $vehicleModel->selectOne($vehicle_id);
+    return view('vehicle', $data);
+  }
+
 //  Function to add items into a user's cart
   public function addToCart()
   {
