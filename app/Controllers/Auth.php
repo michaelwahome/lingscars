@@ -52,8 +52,13 @@ class Auth extends BaseController
 			$session = session();
 			$session->set('user_details', $user_info);
 
-			//Redirect to Home page
-			return redirect()->to('/');
+			if($user_info["role_id"] == 1)
+			{
+				return redirect()->to('/');
+			} else {
+				return redirect()->to('/admin/dashboard');
+			}
+			
 
 		// 	//Admin or User clearance level
         //  1. User role_id -> Redirect to user landing page

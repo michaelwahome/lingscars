@@ -80,9 +80,7 @@
                 <div class="bottom-center-image">
                 <a href="/catalogue/categorycatalogue/2"><img src="../images/center-image-two.png" alt=""></a>
                 </div>
-                <div class="bottom-center-image">
-                    <a href="/catalogue/categorycatalogue/3"><img src="../images/center-image-three.png" alt=""></a>
-                </div>
+                <a href="/categorylist" class="landing-page-view-all">Click here for more</a>
             </div>
         </div>
     </section>
