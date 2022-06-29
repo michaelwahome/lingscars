@@ -35,6 +35,7 @@
                   <p><b>Price: €<?php echo $car["vehicle_details"]['unit_price']; ?></b></p>
                   <p><b>Quantity: <?php echo $car["saledetail_details"]['quantity']; ?></b></p>
                   <p><b>Subtotal: €<?php echo $car["saledetail_details"]['subtotal']; ?></b></p>
+                  <p><b>Date: <?php echo $car["saledetail_details"]['created_at']; ?></b></p>
                 </div>
               
             </div>
