@@ -23,7 +23,7 @@
             <thead>
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Category ID</th>
+              <th scope="col">Category</th>
               <th scope="col">Name</th>
               <th scope="col">Action</th>
             </tr>
@@ -32,7 +32,15 @@
               <tbody>
               <tr>
                 <td><?php echo $row['subcategory_id']; ?></td>
-                <td><?php echo $row['category_id']; ?></td>
+                <td>
+                  <?php 
+                    foreach($categories as $category){
+                      if($category["category_id"] == $row["category_id"]) { 
+                        echo $category["category_name"]; 
+                      }
+                    } 
+                  ?>
+                </td>
                 <td><?php echo $row['subcategory_name']; ?></td>
                 <td style="display: flex; flex-direction: column; justify-content: space-evenly;">
                   <a href="/subcategories/edit/<?php echo $row['subcategory_id'] ?>" class="btn btn-primary btn-sm">Update</a>

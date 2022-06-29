@@ -17,9 +17,15 @@
             <input type="hidden" name="_method" value="PUT">
             <div class="row">
               <div class="col-md-12">
-                <div class="form-group mb-2">
-                  <label for="name">Category</label>
-                  <input value="<?= $subcategories['category_id'] ?>" type="text" class="form-control" name="category_id" required placeholder="Enter subcategory">
+                <div class="form-group mb-2" style="display: flex; flex-direction: column; justify-content: space-evenly;">
+                  <label class="label" for="name">Category</label>
+                  <select class="input dropdown dropdown-item" name="category_id" id="category_id" required>
+                      <option value="<?= $subcategories['category_id'] ?>" selected>Enter category</option>
+                      <?php foreach($categories as $category){ ?>
+                        <option value="<?php echo $category["category_id"]; ?>"><?php echo $category["category_name"]; ?></option>
+                       <?php } ?> 
+                      <div class="error"></div>
+                  </select>
                 </div>
                 <div class="form-group mb-2">
                   <label for="name">Sub Category</label>

@@ -12,12 +12,19 @@
     {
       $subcategoryModel = new SubcategoryModel();
       $data[ 'subcategory' ] = $subcategoryModel->findAll();
+
+      $categoryModel = new CategoryModel();
+      $data["categories"] = $categoryModel->findAll();
+
       return view('admin/subcategories/read', $data);
     }
 
     public function create ()
     {
-      return view('admin/subcategories/create');
+      $categoryModel = new CategoryModel();
+      $data["categories"] = $categoryModel->findAll();
+
+      return view('admin/subcategories/create', $data);
     }
 
     public function store ()
@@ -38,6 +45,10 @@
     {
       $subcategoryModel = new SubcategoryModel();
       $data[ 'subcategories' ] = $subcategoryModel->find($id);
+
+      $categoryModel = new CategoryModel();
+      $data["categories"] = $categoryModel->findAll();
+      
       return view('/admin/subcategories/edit', $data);
     }
 

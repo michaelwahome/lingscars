@@ -18,7 +18,7 @@
 
               <div class="col-md-12">
                 <div class="form-group mb-2" style="display: flex; flex-direction: column; justify-content: space-evenly;">
-                  <label class="label" for="gender">User role</label>
+                  <label class="label" for="name">User role</label>
                   <select class="input dropdown dropdown-item" name="role_id" id="role_id" required>
                       <option value="" selected disabled>Enter user role</option>
                       <?php foreach($roles as $role){ ?>
