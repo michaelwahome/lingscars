@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\AuthModel;
 use App\Models\CartModel;
 use App\Models\CartDetailModel;
+use App\Models\RoleModel;
 
 class Users extends BaseController
 {
@@ -11,11 +12,18 @@ class Users extends BaseController
     {
         $authModel = new AuthModel();
         $data['user']=$authModel->findAll();
+
+        $roleModel = new RoleModel();
+        $data["roles"] = $roleModel->findAll();
+        
         return view('admin/users/read', $data);
     }
     public function create()
     {
-        return view('admin/users/create');
+        $roleModel = new RoleModel();
+        $data["roles"] = $roleModel->findAll();
+
+        return view('admin/users/create', $data);
     }
 
     public function store()
@@ -38,6 +46,10 @@ class Users extends BaseController
     {
         $user = new AuthModel();
         $data['user'] = $user->find($id);
+
+        $roleModel = new RoleModel();
+        $data["roles"] = $roleModel->findAll();
+
         return view('/admin/users/edit', $data);
     }
 

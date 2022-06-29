@@ -74,6 +74,7 @@
    * */
   $routes->group('admin', function ($routes) {
     //route for admin
+    $routes->get('/', 'Dashboard::index');
     $routes->get('dashboard', 'Dashboard::index');
     // routes for vehicles CRUD
     $routes->get('vehicles/read', 'Vehicle::index');

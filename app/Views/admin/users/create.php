@@ -17,9 +17,15 @@
             <div class="row">
 
               <div class="col-md-12">
-                <div class="form-group mb-2">
-                  <label for="name">Role</label>
-                  <input type="text" class="form-control" name="role_id" required placeholder="Enter user role">
+                <div class="form-group mb-2" style="display: flex; flex-direction: column; justify-content: space-evenly;">
+                  <label class="label" for="gender">User role</label>
+                  <select class="input dropdown dropdown-item" name="role_id" id="role_id" required>
+                      <option value="" selected disabled>Enter user role</option>
+                      <?php foreach($roles as $role){ ?>
+                        <option value="<?php echo $role["role_id"]; ?>"><?php echo $role["role_name"]; ?></option>
+                       <?php } ?> 
+                      <div class="error"></div>
+                  </select>
                 </div>
                 <div class="form-group mb-2">
                   <label for="name">First Name</label>

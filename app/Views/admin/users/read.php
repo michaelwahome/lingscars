@@ -36,7 +36,15 @@
               <tbody>
               <tr>
                 <td><?php echo $row['user_id']; ?></td>
-                <td><?php echo $row['role_id']; ?></td>
+                <td>
+                  <?php 
+                    foreach($roles as $role){
+                      if($role["role_id"] == $row["role_id"]) { 
+                        echo $role["role_name"]; 
+                      }
+                    } 
+                  ?>
+                </td>
                 <td><?php echo $row['first_name']; ?></td>
                 <td><?php echo $row['last_name']; ?></td>
                 <td><?php echo $row['email']; ?></td>
