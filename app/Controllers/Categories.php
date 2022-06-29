@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 use App\Models\CategoryModel;
+use App\Models\SubcategoryModel;
+use App\Models\VehicleModel;
 
 class Categories extends BaseController
 {
@@ -44,6 +46,11 @@ class Categories extends BaseController
     public function delete($id)
     {
       $category = new CategoryModel();
+      $subcategoryModel = new SubcategoryModel();
+      $vehicleModel = new VehicleModel();
+
+      $vehicleModel->deleteSome($id);
+      $subcategoryModel->deleteSome($id);
       $data['category'] = $category->delete($id);
       return redirect()->to('admin/categories/read')->with('status', 'Category deleted');
     }

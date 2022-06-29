@@ -19,6 +19,10 @@
 
               <div class="col-md-12">
                 <div class="form-group mb-2">
+                  <label for="name">Category</label>
+                  <input type="text" value="<?= $vehicles['category_id']; ?>" class="form-control" name="category_id" required placeholder="Enter category">
+                </div>
+                <div class="form-group mb-2">
                   <label for="name">Subcategory</label>
                   <input type="text" value="<?= $vehicles['subcategory_id']; ?>" class="form-control" name="subcategory_id" required placeholder="Enter subcategory">
                 </div>

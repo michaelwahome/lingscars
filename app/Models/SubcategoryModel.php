@@ -110,4 +110,17 @@
         return "Unsuccessful";
       }
     }
+
+    //This function deletes some subcategories based on the foreign key
+    public function deleteSome($category_id)
+    {
+      if ($this->db->query("DELETE FROM subcategories WHERE category_id = '$category_id'"))
+      {
+          return "Successful";
+      }
+      else
+      {
+          return "Unsuccessful";
+      }
+    }
   }

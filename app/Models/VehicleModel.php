@@ -82,6 +82,7 @@ class VehicleModel extends model
 		{
 			$result[$i] = array(
 				'vehicle_id' => $row->vehicle_id, 
+				'category_id' => $row->category_id, 
 				'subcategory_id' => $row->subcategory_id, 
 				'vehicle_model'=> $row->vehicle_model, 
 				'unit_price'=> $row->unit_price, 
@@ -118,6 +119,7 @@ class VehicleModel extends model
 		{
 			$result[$i] = array(
 				'vehicle_id' => $row->vehicle_id, 
+				'category_id' => $row->category_id, 
 				'subcategory_id' => $row->subcategory_id, 
 				'vehicle_model'=> $row->vehicle_model, 
 				'unit_price'=> $row->unit_price, 
@@ -164,6 +166,7 @@ class VehicleModel extends model
 		{
 			$result = array(
 				'vehicle_id' => $row->vehicle_id, 
+				'category_id' => $row->category_id, 
 				'subcategory_id' => $row->subcategory_id, 
 				'vehicle_model'=> $row->vehicle_model, 
 				'unit_price'=> $row->unit_price, 
@@ -197,6 +200,7 @@ class VehicleModel extends model
 		{
 			$result[$i] = array(
 				'vehicle_id' => $row->vehicle_id, 
+				'category_id' => $row->category_id, 
 				'subcategory_id' => $row->subcategory_id, 
 				'vehicle_model'=> $row->vehicle_model, 
 				'unit_price'=> $row->unit_price, 
@@ -232,6 +236,7 @@ class VehicleModel extends model
 		{
 			$result[$i] = array(
 				'vehicle_id' => $row->vehicle_id, 
+				'category_id' => $row->category_id, 
 				'subcategory_id' => $row->subcategory_id, 
 				'vehicle_model'=> $row->vehicle_model, 
 				'unit_price'=> $row->unit_price, 
@@ -269,4 +274,30 @@ class VehicleModel extends model
 		    return "Unsuccessful";
 		}
 	}
+
+	//This function deletes some vehicles based on the foreign key
+    public function deleteSome($category_id)
+    {
+      if ($this->db->query("DELETE FROM vehicles WHERE category_id = '$category_id'"))
+      {
+          return "Successful";
+      }
+      else
+      {
+          return "Unsuccessful";
+      }
+    }
+
+	//This function deletes some vehicles based on the foreign key
+    public function deleteSomeSub($subcategory_id)
+    {
+      if ($this->db->query("DELETE FROM vehicles WHERE subcategory_id = '$subcategory_id'"))
+      {
+          return "Successful";
+      }
+      else
+      {
+          return "Unsuccessful";
+      }
+    }
 }

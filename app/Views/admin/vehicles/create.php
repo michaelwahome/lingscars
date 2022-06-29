@@ -13,10 +13,14 @@
           </h5>
         </div>
         <div class="card-body">
-          <form action="<?= base_url('/admin/vehicles/store') ?>" method="post" enctype="multipart/form-data">
+          <form action="<?= base_url('/admin/vehicles/store'); ?>" method="post" enctype="multipart/form-data">
             <div class="row">
 
               <div class="col-md-12">
+                <div class="form-group mb-2">
+                  <label for="name">Category</label>
+                  <input type="text" class="form-control" name="category_id" required placeholder="Enter category">
+                </div>
                 <div class="form-group mb-2">
                   <label for="name">Subcategory</label>
                   <input type="text" class="form-control" name="subcategory_id" required placeholder="Enter subcategory">

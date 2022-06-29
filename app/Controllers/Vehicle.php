@@ -40,7 +40,8 @@ class Vehicle extends BaseController
       $data = [
         /* TODO: other fields that are to be uploaded to the database. Not included in the admin side at all as of now.*/
         /*Functionality of the multiple image upload*/
-        'subcategory_name'      => $this->request->getPost('subcategory_id'),
+        'category_id'      => $this->request->getPost('category_id'),
+        'subcategory_id'      => $this->request->getPost('subcategory_id'),
         'vehicle_model'       => $this->request->getPost('vehicle_model'),
         'vehicle_description' => $this->request->getPost('vehicle_description'),
         'unit_price'          => $this->request->getPost('unit_price'),
@@ -55,7 +56,7 @@ class Vehicle extends BaseController
         'image'               => $newName
       ];
       $vehicle->save($data);
-      return redirect()->to('admin/vehicles')->with('status', 'Vehicle saved');
+      return redirect()->to('admin/vehicles/read')->with('status', 'Vehicle saved');
 
     }
 
@@ -67,6 +68,7 @@ class Vehicle extends BaseController
     {
       $result[$row->vehicle_id] = array(
         'vehicle_id'          => $row->vehicle_id,
+        'category_id'      => $row->category_id,
         'subcategory_id'      => $row->subcategory_id,
         'vehicle_model'       => $row->vehicle_model,
         'unit_price'          => $row->unit_price,
@@ -111,6 +113,7 @@ class Vehicle extends BaseController
       }
     }
     $data = [
+      'category_id'      => $this->request->getPost('category_id'),
       'subcategory_id'      => $this->request->getPost('subcategory_id'),
       'vehicle_model'       => $this->request->getPost('vehicle_model'),
       'vehicle_description' => $this->request->getPost('vehicle_description'),

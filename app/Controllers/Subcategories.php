@@ -4,6 +4,7 @@
 
   use App\Models\CategoryModel;
   use App\Models\SubcategoryModel;
+  use App\Models\VehicleModel;
 
   class Subcategories extends BaseController
   {
@@ -59,6 +60,9 @@
     public function delete ($id = null)
     {
       $subcategoryModel = new SubcategoryModel();
+      $vehicleModel = new VehicleModel();
+
+      $vehicleModel->deleteSomeSub($id);
       $data[ 'subcategory' ] = $subcategoryModel->delete($id);
       return redirect()->to('admin/subcategories/read')->with('status', 'Subcategory deleted');
     }
