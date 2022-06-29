@@ -90,14 +90,17 @@ class Sale extends BaseController
 
         $session = session();
         $user_id = $_SESSION["user_details"]["user_id"];
-        $sale = $saleModel->selectUsingUserId($user_id);
+        $sales = $saleModel->selectUsingUserId($user_id);
 
-        if($sale[0] == 0)
+        if($sales[0] == 0)
         {
         return view('emptyorderhistory');
         }
-
-        $items = $saleDetailModel->selectUsingUserId($user_id);
+        $i = 0;
+        foreach($sales as $sale)
+        {
+            $items[$i] = $saleDetailModel->selectUsingUserId($sale["sale_id"]);
+        }
 
         if($items[0] == 0)
         {
@@ -106,11 +109,14 @@ class Sale extends BaseController
 
         $i = 0;
 
-        foreach($items as $row)
+        foreach($items as $rows)
         {
-        $vehicles[$i]["saledetail_id"] = $row["saledetail_id"];
-        $vehicles[$i]["vehicle_id"] = $row["vehicle_id"];
-        $i++;
+            foreach($rows as $row)
+            {
+                $vehicles[$i]["saledetail_id"] = $row["saledetail_id"];
+                $vehicles[$i]["vehicle_id"] = $row["vehicle_id"];
+                $i++;
+            }
         }
 
         $i = 0;
