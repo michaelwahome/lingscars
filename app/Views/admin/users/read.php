@@ -26,6 +26,7 @@
               <th scope="col">Role</th>
               <th scope="col">First Name</th>
               <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
               <th scope="col">Password</th>
               <th scope="col">Gender</th>
               <th scope="col">Action</th>
@@ -38,6 +39,7 @@
                 <td><?php echo $row['role_id']; ?></td>
                 <td><?php echo $row['first_name']; ?></td>
                 <td><?php echo $row['last_name']; ?></td>
+                <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['password']; ?></td>
                 <td><?php echo $row['gender']; ?></td>
                 <td style="display: flex; flex-direction: column; justify-content: space-evenly;">
