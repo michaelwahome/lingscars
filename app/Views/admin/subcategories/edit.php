@@ -24,7 +24,6 @@
                       <?php foreach($categories as $category){ ?>
                         <option value="<?php echo $category["category_id"]; ?>"><?php echo $category["category_name"]; ?></option>
                        <?php } ?> 
-                      <div class="error"></div>
                   </select>
                 </div>
                 <div class="form-group mb-2">

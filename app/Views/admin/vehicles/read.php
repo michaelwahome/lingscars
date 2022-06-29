@@ -39,8 +39,24 @@
             ?>
             <tr>
               <td><?php echo $row['vehicle_id']; ?></td>
-              <td><?php echo $row['category_id']; ?></td>
-              <td><?php echo $row['subcategory_id']; ?></td>
+              <td>
+                <?php 
+                  foreach($categories as $category){
+                    if($category["category_id"] == $row["category_id"]) { 
+                      echo $category["category_name"]; 
+                    }
+                  } 
+                ?>
+              </td>
+              <td>
+                <?php 
+                  foreach($subcategories as $subcategory){
+                    if($subcategory["subcategory_id"] == $row["subcategory_id"]) { 
+                      echo $subcategory["subcategory_name"]; 
+                    }
+                  } 
+                ?>
+              </td>
               <td><?php echo $row['vehicle_model']; ?></td>
               <td><?php echo $row['unit_price']; ?></td>
               <td><?php echo $row['available_quantity']; ?></td>

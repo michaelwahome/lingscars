@@ -17,13 +17,14 @@
             <div class="row">
 
               <div class="col-md-12">
-                <div class="form-group mb-2">
-                  <label for="name">Category</label>
-                  <input type="text" class="form-control" name="category_id" required placeholder="Enter category">
-                </div>
-                <div class="form-group mb-2">
-                  <label for="name">Subcategory</label>
-                  <input type="text" class="form-control" name="subcategory_id" required placeholder="Enter subcategory">
+                <div class="form-group mb-2" style="display: flex; flex-direction: column; justify-content: space-evenly;">
+                  <label class="label" for="name">Vehicle Subcategory</label>
+                  <select class="input dropdown dropdown-item" name="subcategory_id" id="subcategory_id" required>
+                      <option value="" selected disabled>Enter subcategory</option>
+                      <?php foreach($subcategories as $subcategory){ ?>
+                        <option value="<?php echo $subcategory["subcategory_id"]; ?>"><?php echo $subcategory["subcategory_name"]; ?></option>
+                       <?php } ?> 
+                  </select>
                 </div>
                 <div class="form-group mb-2">
                   <label for="name">Vehicle Model</label>

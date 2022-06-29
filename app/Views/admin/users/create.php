@@ -18,7 +18,7 @@
 
               <div class="col-md-12">
                 <div class="form-group mb-2" style="display: flex; flex-direction: column; justify-content: space-evenly;">
-                  <label class="label" for="name">User role</label>
+                  <label class="label" for="name">User Role</label>
                   <select class="input dropdown dropdown-item" name="role_id" id="role_id" required>
                       <option value="" selected disabled>Enter user role</option>
                       <?php foreach($roles as $role){ ?>
@@ -37,15 +37,19 @@
                 </div>
                 <div class="form-group mb-2">
                   <label for="name">Email</label>
-                  <input type="text" class="form-control" name="email" required placeholder="Enter email">
+                  <input type="email" class="form-control" name="email" required placeholder="Enter email">
                 </div>
                 <div class="form-group mb-2">
                   <label for="name">Password</label>
                   <input type="text" class="form-control" name="password" required placeholder="Enter password">
                 </div>
-                <div class="form-group mb-2">
-                  <label for="name">Gender</label>
-                  <input type="text" class="form-control" name="gender" required placeholder="Enter gender">
+                <div class="form-group mb-2" style="display: flex; flex-direction: column; justify-content: space-evenly;">
+                  <label class="label" for="name">Gender</label>
+                  <select class="input dropdown dropdown-item" name="gender" id="gender" required>
+                      <option value="" selected disabled>Enter gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                  </select>
                 </div>
                 <div class="col-md12">
                   <hr>

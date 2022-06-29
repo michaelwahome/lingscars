@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\VehicleModel;
+use App\Models\CategoryModel;
+use App\Models\SubcategoryModel;
 
 class Vehicle extends BaseController
 {
@@ -10,13 +12,26 @@ class Vehicle extends BaseController
     {
       $vehicleModel = new VehicleModel();
       $data['vehicles'] = $vehicleModel->selectAll();
+
+      $subcategoryModel = new SubcategoryModel();
+      $data["subcategories"] = $subcategoryModel->findAll();
+
+      $categoryModel = new CategoryModel();
+      $data["categories"] = $categoryModel->findAll();
+
       return view('admin/vehicles/read', $data); // Change this view
     }
 
     
     public function create()
     {
-      return view('admin/vehicles/create');
+      $subcategoryModel = new SubcategoryModel();
+      $data["subcategories"] = $subcategoryModel->findAll();
+
+      $categoryModel = new CategoryModel();
+      $data["categories"] = $categoryModel->findAll();
+
+      return view('admin/vehicles/create', $data);
     }
     
 
@@ -37,10 +52,15 @@ class Vehicle extends BaseController
           }
         }
       }
+
+      $subcategoryModel = new SubcategoryModel();
+      $subcategory_id = $this->request->getPost('subcategory_id');
+      $subcategory = $subcategoryModel->selectOne($subcategory_id);
+
       $data = [
         /* TODO: other fields that are to be uploaded to the database. Not included in the admin side at all as of now.*/
         /*Functionality of the multiple image upload*/
-        'category_id'      => $this->request->getPost('category_id'),
+        'category_id'      => $subcategory["category_id"],
         'subcategory_id'      => $this->request->getPost('subcategory_id'),
         'vehicle_model'       => $this->request->getPost('vehicle_model'),
         'vehicle_description' => $this->request->getPost('vehicle_description'),
@@ -95,6 +115,13 @@ class Vehicle extends BaseController
   {
     $vehicle = new VehicleModel();
     $data['vehicles'] = $vehicle->find($id);
+
+    $subcategoryModel = new SubcategoryModel();
+    $data["subcategories"] = $subcategoryModel->findAll();
+
+    $categoryModel = new CategoryModel();
+    $data["categories"] = $categoryModel->findAll();
+
     return view('/admin/vehicles/edit', $data);
   }
 
@@ -112,8 +139,13 @@ class Vehicle extends BaseController
         }
       }
     }
+
+    $subcategoryModel = new SubcategoryModel();
+    $subcategory_id = $this->request->getPost('subcategory_id');
+    $subcategory = $subcategoryModel->selectOne($subcategory_id);
+
     $data = [
-      'category_id'      => $this->request->getPost('category_id'),
+      'category_id'      => $subcategory["category_id"],
       'subcategory_id'      => $this->request->getPost('subcategory_id'),
       'vehicle_model'       => $this->request->getPost('vehicle_model'),
       'vehicle_description' => $this->request->getPost('vehicle_description'),
