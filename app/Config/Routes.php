@@ -50,6 +50,9 @@
     $routes->get('subcategorycatalogue/(:any)', 'Catalogue::subcategorycatalogue/$1');
   });
 
+  $routes->get('orderhistory', 'Sale::orderhistory');
+  $routes->get('emptyorderhistory', 'Sale::emptyorderhistory');
+
   $routes->get('categorylist', 'Catalogue::categorylist');
 
   $routes->post('vehicle', 'Cart::vehicle');
