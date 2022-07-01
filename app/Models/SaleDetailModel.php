@@ -50,7 +50,7 @@ class SaleDetailModel extends Model
 	}
 
 	//This funtion selects records from the table based on a foreign key
-	public function selectUsingUserId($sale_id)
+	public function selectUsingSaleId($sale_id)
 	{
 		$query = $this->db->query("SELECT * FROM sale_details WHERE sale_id='$sale_id'");
 

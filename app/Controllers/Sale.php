@@ -99,7 +99,8 @@ class Sale extends BaseController
         $i = 0;
         foreach($sales as $sale)
         {
-            $items[$i] = $saleDetailModel->selectUsingUserId($sale["sale_id"]);
+            $items[$i] = $saleDetailModel->selectUsingSaleId($sale["sale_id"]);
+            $i++;
         }
 
         if($items[0] == 0)
